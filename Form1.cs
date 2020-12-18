@@ -19,7 +19,7 @@ namespace RIOFLIX123
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("SUNDAR GAANDU");
+            MessageBox.Show("Ruhal GAANDU");
             MessageBox.Show("LUN");
         }
     }
