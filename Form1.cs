@@ -21,30 +21,41 @@ namespace RIOFLIX123
             InitializeComponent();
         }
 
-        private async void Form1_Load(object sender, EventArgs e)
+        private  void Form1_Load(object sender, EventArgs e)
         {
             
-            var stream = File.Open(@"C:\Users\rk\Pictures\Screenshots\isbah.png", FileMode.Open);
-
-            
-            var task = new FirebaseStorage("fir-fast-36fe8.appspot.com")
-                .Child("data")
-                .Child("project")
-                .Child("file.png")
-                .PutAsync(stream);
-           
-            
-            task.Progress.ProgressChanged += (s, rk) => MessageBox.Show($"Progress: {rk.Percentage} %");
-
-            
-            var downloadUrl = await task;
-
-            MessageBox.Show("hello");
-            MessageBox.Show(downloadUrl);
 
 
 
 
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog im = new OpenFileDialog();
+            im.Title = "Select";
+            im.Filter = "(mp3,wav,mp4,mov,wmv,mpg)|*.mp3;*.wav;*.mp4;*.mov;*.wmv;*.mpg|all files|*.*";
+            if (im.ShowDialog() == DialogResult.OK)
+            {
+
+
+                
+                var stream= File.Open(im.FileName,FileMode.Open);
+                var task = new FirebaseStorage("fir-fast-36fe8.appspot.com")
+                    .Child("data")
+                    .Child("project")
+                    .Child(im.FileName)
+                    .PutAsync(stream);
+
+
+                task.Progress.ProgressChanged += (s, rk) => MessageBox.Show($"Progress: {rk.Percentage} %");
+
+
+                var downloadUrl = await task;
+
+                axWindowsMediaPlayer1.URL = downloadUrl;
+
+            }
 
         }
     }
