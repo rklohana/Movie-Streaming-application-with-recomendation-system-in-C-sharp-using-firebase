@@ -23,9 +23,10 @@ namespace RIOFLIX123
 
         private  void Form1_Load(object sender, EventArgs e)
         {
+            usersignup us = new usersignup();
+            us.Show();
             
-
-
+            
 
 
         }
@@ -37,25 +38,41 @@ namespace RIOFLIX123
             im.Filter = "(mp3,wav,mp4,mov,wmv,mpg)|*.mp3;*.wav;*.mp4;*.mov;*.wmv;*.mpg|all files|*.*";
             if (im.ShowDialog() == DialogResult.OK)
             {
+                try
+                {
 
 
+                    var stream = File.Open(im.FileName, FileMode.Open);
+                    var task = new FirebaseStorage("fir-fast-36fe8.appspot.com")
+                        .Child("data")
+                        .Child("project")
+                        .Child(im.FileName)
+                        .PutAsync(stream);
+                    
+
+                    task.Progress.ProgressChanged += (s, rk) =>MessageBox.Show( "{rk.Percentage}");
+
+
+
+                    var downloadUrl = await task;
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("some error");
+                }
+               
                 
-                var stream= File.Open(im.FileName,FileMode.Open);
-                var task = new FirebaseStorage("fir-fast-36fe8.appspot.com")
-                    .Child("data")
-                    .Child("project")
-                    .Child(im.FileName)
-                    .PutAsync(stream);
-
-
-                task.Progress.ProgressChanged += (s, rk) => MessageBox.Show($"Progress: {rk.Percentage} %");
-
-
-                var downloadUrl = await task;
-
-                axWindowsMediaPlayer1.URL = downloadUrl;
-
             }
+
+        }
+
+        private void colorSlider1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void bunifuProgressBar1_progressChanged(object sender, EventArgs e)
+        {
 
         }
     }
