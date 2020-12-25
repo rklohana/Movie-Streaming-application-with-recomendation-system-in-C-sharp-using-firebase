@@ -26,7 +26,7 @@ namespace RIOFLIX123
         {
             OpenFileDialog on = new OpenFileDialog();
             on.Title = "Photo";
-            on.Filter = "Image (*.jpg) | *.jpg";
+            on.Filter = "Image (jpg,jpeg,png) | *.jpg;*.jpeg;*.png|all files|*.*";
             if (on.ShowDialog() == DialogResult.OK)
             {
                 Image ir = new Bitmap(on.FileName);
@@ -70,24 +70,39 @@ namespace RIOFLIX123
 
             }
         }
-
-        private void movietemplate_Load(object sender, EventArgs e)
+        moviedata md = new moviedata();
+        public IFirebaseClient client;
+        private async void movietemplate_Load(object sender, EventArgs e)
         {
             bunifuProgressBar1.Hide();
+            
+            client = new FireSharp.FirebaseClient(md.config);
+            if (client == null)
+            {
+
+                MessageBox.Show("error Connecting");
+            }
+
         }
 
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        private async void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
             moviedata md = new moviedata();
-            string[] genre = genretext.Text.Split(',');
-            string[] director = creatortext.Text.Split(',');
-            string[] actor = startext.Text.Split(',');
-            string[] keyword = keywordtext.Text.Split(',');
+            string[] genre = genretext.Text.Split(',','|');
+            string[] director = creatortext.Text.Split(',','|');
+            string[] actor = startext.Text.Split(',', '|');
+            string[] keyword = keywordtext.Text.Split(',', '|');
             string img;
             Bitmap image = new Bitmap(pictureBox1.Image);
             img = md.photoconvert(image);
             md.setdata(nametext.Text, director, genre, actor, keyword, descriptext.Text, url, img);
             md.adddata(md, "1");
+            foreach(string j in director)
+            {
+                MessageBox.Show(j);
+            }
+            MessageBox.Show("Done");
+            this.Hide();
         }
 
         private void bunifuMaterialTextbox5_OnValueChanged(object sender, EventArgs e)

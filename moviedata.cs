@@ -25,7 +25,7 @@ namespace RIOFLIX123
         }
 
         private string name;
-        private string Name { get
+        public string Name { get
             {
                 return name;
             }
@@ -34,7 +34,7 @@ namespace RIOFLIX123
                 }
         }
         private string description;
-        private string Description
+        public string Description
         {
             get
             {
@@ -46,7 +46,7 @@ namespace RIOFLIX123
             }
         }
         private string[] director;
-        private string[] Director
+        public string[] Director
         {
             get
             {
@@ -58,7 +58,7 @@ namespace RIOFLIX123
             }
         }
         private string[] genre;
-        private string[] Genre
+        public string[] Genre
         {
             get
             {
@@ -70,7 +70,7 @@ namespace RIOFLIX123
             }
         }
         private string[] keyword;
-        private string[] Keyword
+        public string[] Keyword
         {
             get
             {
@@ -82,7 +82,7 @@ namespace RIOFLIX123
             }
         }
         private string[] actor;
-        private string[] Actor
+        public string[] Actor
         {
             get
             {
@@ -95,7 +95,7 @@ namespace RIOFLIX123
         }
 
         private string imagefile;
-        private string Imagefile
+        public string Imagefile
         {
             get
             {
@@ -108,7 +108,7 @@ namespace RIOFLIX123
         }
 
         private string videofile;
-        private string Videofile
+        public string Videofile
         {
             get
             {
@@ -122,11 +122,12 @@ namespace RIOFLIX123
         public IFirebaseClient client;
 
 
-        protected IFirebaseConfig config = new FirebaseConfig
+        public IFirebaseConfig config = new FirebaseConfig
         {
-            AuthSecret = "VIB4QyeoIjd43kf2yFcU7l9ynqtKSJPF3fplsdUp",
-            BasePath = "https://fir-fast-36fe8.firebaseio.com/"
+            AuthSecret = "y4RjXMGpXFsmuG4T0pMLmWIBtcQ6V84ke4uJ3hCT",
+            BasePath = "https://rioflix-default-rtdb.firebaseio.com/"
         };
+
         public IFirebaseConfig getConfig()
         {
             return config;
@@ -135,10 +136,10 @@ namespace RIOFLIX123
         {
             m_id++;
             client = new FireSharp.FirebaseClient(config);
-            if (client == null)
+            if (client != null)
             {
 
-                MessageBox.Show("not Connected");
+                MessageBox.Show("Connected");
             }
         }
         public string photoconvert(Bitmap i)
@@ -159,11 +160,25 @@ namespace RIOFLIX123
             m.Dispose();
             return bm;
         }
-        public async void adddata(moviedata a, string b)
+
+
+        public async void addmultidata(moviedata m)
         {
-            SetResponse response = await client.SetAsync("Moviedata DATA/" + b, a);
-            moviedata result = response.ResultAs<moviedata>();
-            /////   MessageBox.Show("Data inserted");
+
+        }
+        public async void adddata(moviedata md, string b)
+        {
+            try
+            {
+                SetResponse response = await client.SetAsync("Movie DATA/" + b, md);
+                moviedata result = response.ResultAs<moviedata>();
+                MessageBox.Show(name);
+                MessageBox.Show("Data inserted");
+            }
+            catch(Exception eeee)
+            {
+                MessageBox.Show(eeee.ToString());
+            }
         }
 
         public async void deletedata(string a)
@@ -174,6 +189,7 @@ namespace RIOFLIX123
         }
         public async void updatedata(string a, moviedata b)
         {
+            MessageBox.Show("CALLed");
             FirebaseResponse r = await client.UpdateAsync("Moviedata DATA/" + a, b);
             moviedata obj = r.ResultAs<moviedata>();
             //  MessageBox.Show("Data updated");

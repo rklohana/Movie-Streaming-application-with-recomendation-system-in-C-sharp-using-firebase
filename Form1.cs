@@ -23,7 +23,8 @@ namespace RIOFLIX123
 
         private  void Form1_Load(object sender, EventArgs e)
         {
-        
+            movietemplate mt = new movietemplate();
+            mt.Hide();
             
         }
 
@@ -70,14 +71,14 @@ namespace RIOFLIX123
                         .Child(im.FileName)
                         .PutAsync(stream);
 
-
-                    task.Progress.ProgressChanged += (s, rk) => bunifuProgressBar1.Value = rk.Percentage;
+                    int value;
+                    task.Progress.ProgressChanged += (s, rk) =>  value= rk.Percentage;
               
 
 
 
                     var downloadUrl = await task;
-                    axWindowsMediaPlayer1.URL = downloadUrl;
+                    //axWindowsMediaPlayer1.URL = downloadUrl;
                     stream = null;
                     GC.Collect();
                 }
