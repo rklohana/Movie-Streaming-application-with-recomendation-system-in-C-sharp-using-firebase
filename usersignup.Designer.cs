@@ -30,24 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usersignup));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.conpasstext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.passtext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.signupbutt = new Bunifu.Framework.UI.BunifuThinButton2();
             this.emailtext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.addresstext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.mobiletext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.nametext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.signupbutt = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.conpasstext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.passtext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
             // 
+            this.bunifuGradientPanel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel5);
@@ -74,6 +75,138 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(620, 456);
             this.bunifuGradientPanel1.TabIndex = 0;
             this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(32, 264);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(178, 23);
+            this.bunifuCustomLabel5.TabIndex = 12;
+            this.bunifuCustomLabel5.Text = "Confirm Password:";
+            // 
+            // bunifuCustomLabel6
+            // 
+            this.bunifuCustomLabel6.AutoSize = true;
+            this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(115, 223);
+            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(101, 23);
+            this.bunifuCustomLabel6.TabIndex = 11;
+            this.bunifuCustomLabel6.Text = "Password:";
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(144, 182);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(66, 23);
+            this.bunifuCustomLabel3.TabIndex = 10;
+            this.bunifuCustomLabel3.Text = "Email:";
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(121, 141);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(89, 23);
+            this.bunifuCustomLabel4.TabIndex = 9;
+            this.bunifuCustomLabel4.Text = "Address:";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(131, 100);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(79, 23);
+            this.bunifuCustomLabel2.TabIndex = 8;
+            this.bunifuCustomLabel2.Text = "Mobile:";
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(138, 59);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(72, 23);
+            this.bunifuCustomLabel1.TabIndex = 7;
+            this.bunifuCustomLabel1.Text = "Name:";
+            // 
+            // conpasstext
+            // 
+            this.conpasstext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.conpasstext.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.conpasstext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.conpasstext.ForeColor = System.Drawing.Color.Maroon;
+            this.conpasstext.HintForeColor = System.Drawing.Color.Empty;
+            this.conpasstext.HintText = "";
+            this.conpasstext.isPassword = true;
+            this.conpasstext.LineFocusedColor = System.Drawing.Color.Blue;
+            this.conpasstext.LineIdleColor = System.Drawing.Color.DarkRed;
+            this.conpasstext.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.conpasstext.LineThickness = 3;
+            this.conpasstext.Location = new System.Drawing.Point(223, 254);
+            this.conpasstext.Margin = new System.Windows.Forms.Padding(4);
+            this.conpasstext.Name = "conpasstext";
+            this.conpasstext.Size = new System.Drawing.Size(288, 33);
+            this.conpasstext.TabIndex = 6;
+            this.conpasstext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.conpasstext.OnValueChanged += new System.EventHandler(this.conpasstext_OnValueChanged);
+            // 
+            // passtext
+            // 
+            this.passtext.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.passtext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.passtext.ForeColor = System.Drawing.Color.Maroon;
+            this.passtext.HintForeColor = System.Drawing.Color.Empty;
+            this.passtext.HintText = "";
+            this.passtext.isPassword = true;
+            this.passtext.LineFocusedColor = System.Drawing.Color.Blue;
+            this.passtext.LineIdleColor = System.Drawing.Color.DarkRed;
+            this.passtext.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.passtext.LineThickness = 3;
+            this.passtext.Location = new System.Drawing.Point(223, 213);
+            this.passtext.Margin = new System.Windows.Forms.Padding(4);
+            this.passtext.Name = "passtext";
+            this.passtext.Size = new System.Drawing.Size(288, 33);
+            this.passtext.TabIndex = 5;
+            this.passtext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // signupbutt
+            // 
+            this.signupbutt.ActiveBorderThickness = 1;
+            this.signupbutt.ActiveCornerRadius = 20;
+            this.signupbutt.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.signupbutt.ActiveForecolor = System.Drawing.Color.White;
+            this.signupbutt.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.signupbutt.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.signupbutt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("signupbutt.BackgroundImage")));
+            this.signupbutt.ButtonText = "Sign Up";
+            this.signupbutt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.signupbutt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signupbutt.ForeColor = System.Drawing.Color.SeaGreen;
+            this.signupbutt.IdleBorderThickness = 1;
+            this.signupbutt.IdleCornerRadius = 20;
+            this.signupbutt.IdleFillColor = System.Drawing.Color.Maroon;
+            this.signupbutt.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.signupbutt.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.signupbutt.Location = new System.Drawing.Point(255, 354);
+            this.signupbutt.Margin = new System.Windows.Forms.Padding(5);
+            this.signupbutt.Name = "signupbutt";
+            this.signupbutt.Size = new System.Drawing.Size(181, 41);
+            this.signupbutt.TabIndex = 4;
+            this.signupbutt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.signupbutt.Click += new System.EventHandler(this.signupbutt_Click);
             // 
             // emailtext
             // 
@@ -150,138 +283,6 @@
             this.nametext.Size = new System.Drawing.Size(288, 33);
             this.nametext.TabIndex = 0;
             this.nametext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // signupbutt
-            // 
-            this.signupbutt.ActiveBorderThickness = 1;
-            this.signupbutt.ActiveCornerRadius = 20;
-            this.signupbutt.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.signupbutt.ActiveForecolor = System.Drawing.Color.White;
-            this.signupbutt.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.signupbutt.BackColor = System.Drawing.SystemColors.Control;
-            this.signupbutt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("signupbutt.BackgroundImage")));
-            this.signupbutt.ButtonText = "Sign Up";
-            this.signupbutt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signupbutt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signupbutt.ForeColor = System.Drawing.Color.SeaGreen;
-            this.signupbutt.IdleBorderThickness = 1;
-            this.signupbutt.IdleCornerRadius = 20;
-            this.signupbutt.IdleFillColor = System.Drawing.Color.Maroon;
-            this.signupbutt.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.signupbutt.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.signupbutt.Location = new System.Drawing.Point(255, 354);
-            this.signupbutt.Margin = new System.Windows.Forms.Padding(5);
-            this.signupbutt.Name = "signupbutt";
-            this.signupbutt.Size = new System.Drawing.Size(181, 41);
-            this.signupbutt.TabIndex = 4;
-            this.signupbutt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.signupbutt.Click += new System.EventHandler(this.signupbutt_Click);
-            // 
-            // conpasstext
-            // 
-            this.conpasstext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.conpasstext.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.conpasstext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.conpasstext.ForeColor = System.Drawing.Color.Maroon;
-            this.conpasstext.HintForeColor = System.Drawing.Color.Empty;
-            this.conpasstext.HintText = "";
-            this.conpasstext.isPassword = true;
-            this.conpasstext.LineFocusedColor = System.Drawing.Color.Blue;
-            this.conpasstext.LineIdleColor = System.Drawing.Color.DarkRed;
-            this.conpasstext.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.conpasstext.LineThickness = 3;
-            this.conpasstext.Location = new System.Drawing.Point(223, 254);
-            this.conpasstext.Margin = new System.Windows.Forms.Padding(4);
-            this.conpasstext.Name = "conpasstext";
-            this.conpasstext.Size = new System.Drawing.Size(288, 33);
-            this.conpasstext.TabIndex = 6;
-            this.conpasstext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.conpasstext.OnValueChanged += new System.EventHandler(this.conpasstext_OnValueChanged);
-            // 
-            // passtext
-            // 
-            this.passtext.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.passtext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.passtext.ForeColor = System.Drawing.Color.Maroon;
-            this.passtext.HintForeColor = System.Drawing.Color.Empty;
-            this.passtext.HintText = "";
-            this.passtext.isPassword = true;
-            this.passtext.LineFocusedColor = System.Drawing.Color.Blue;
-            this.passtext.LineIdleColor = System.Drawing.Color.DarkRed;
-            this.passtext.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.passtext.LineThickness = 3;
-            this.passtext.Location = new System.Drawing.Point(223, 213);
-            this.passtext.Margin = new System.Windows.Forms.Padding(4);
-            this.passtext.Name = "passtext";
-            this.passtext.Size = new System.Drawing.Size(288, 33);
-            this.passtext.TabIndex = 5;
-            this.passtext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(138, 59);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(72, 23);
-            this.bunifuCustomLabel1.TabIndex = 7;
-            this.bunifuCustomLabel1.Text = "Name:";
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(131, 100);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(79, 23);
-            this.bunifuCustomLabel2.TabIndex = 8;
-            this.bunifuCustomLabel2.Text = "Mobile:";
-            // 
-            // bunifuCustomLabel3
-            // 
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(144, 182);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(66, 23);
-            this.bunifuCustomLabel3.TabIndex = 10;
-            this.bunifuCustomLabel3.Text = "Email:";
-            // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(121, 141);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(89, 23);
-            this.bunifuCustomLabel4.TabIndex = 9;
-            this.bunifuCustomLabel4.Text = "Address:";
-            // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(32, 264);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(178, 23);
-            this.bunifuCustomLabel5.TabIndex = 12;
-            this.bunifuCustomLabel5.Text = "Confirm Password:";
-            // 
-            // bunifuCustomLabel6
-            // 
-            this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(115, 223);
-            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(101, 23);
-            this.bunifuCustomLabel6.TabIndex = 11;
-            this.bunifuCustomLabel6.Text = "Password:";
             // 
             // usersignup
             // 

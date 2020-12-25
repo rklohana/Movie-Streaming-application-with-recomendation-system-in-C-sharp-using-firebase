@@ -1,6 +1,7 @@
-﻿namespace RIOFLIX123
+﻿
+namespace RIOFLIX123
 {
-    partial class Form1
+    partial class loginformUSER
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +29,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.usersignup1 = new RIOFLIX123.usersignup();
+            this.userlogin1 = new RIOFLIX123.userlogin();
             this.SuspendLayout();
             // 
-            // usersignup1
+            // userlogin1
             // 
-            this.usersignup1.Location = new System.Drawing.Point(83, 12);
-            this.usersignup1.Name = "usersignup1";
-            this.usersignup1.Size = new System.Drawing.Size(620, 440);
-            this.usersignup1.TabIndex = 0;
+            this.userlogin1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.userlogin1.Location = new System.Drawing.Point(61, 25);
+            this.userlogin1.Name = "userlogin1";
+            this.userlogin1.Size = new System.Drawing.Size(475, 350);
+            this.userlogin1.TabIndex = 0;
             // 
-            // Form1
+            // loginformUSER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.usersignup1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Controls.Add(this.userlogin1);
+            this.Name = "loginformUSER";
+            this.Text = "loginformUSER";
+            this.Load += new System.EventHandler(this.loginformUSER_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private usersignup usersignup1;
+        private userlogin userlogin1;
     }
 }
-

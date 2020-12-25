@@ -117,29 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAABRJREFUKFNj+E8kGFWIF1Bb4f//ACP7joDdN9a8AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="signupbutt.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAALUAAAApCAYAAABz92iRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKpSURBVHhe7dzNS1RRHMbxgQqKKIpAokAKoRZRGCUiBGWo
-        0WSl0stYM2WODmkxYEYmFYVZMA1GUoERRZHUKggLKmrhIjdCUbTIFoJRCL0s5j944rmXbg1zcqn3HJ7F
-        B1ycGTffGc6cmd+J5HI5iLhEUYtzFLU4R1GLcxS1OEdRi3OmjPr7r594/PYVjt0/j9jNNCr7DmNddr/I
-        tGN7bLD1TjcejT7Htx+Txmbpv1G//PgGW7IJ1B2tQUtpMY6XFOHU4vm4EImITDu2xwZTa5ajobkSmzMH
-        MTgyZGy3IGq+Ajoe9KC2cxdOL5hr/AciM+3MvDnY01qFQ7dOYnzyS17DeVEz6GhfEsmKVcYnEgmbttVL
-        sTPThLGv4+ao+Q6toMU23JZwv10QNffQ3HKYHiQSdo17K9D/4t7fqHnKwQ+F2kOLrc7NnoXqnhg+TIz5
-        UfOIhJ8oTYtFbBGvXovLzwb8qHn2x6MS00IRW3QsW4Taayk/6m1Xm9FZtNC4UMQW3IJsyMb8qMuvHPDO
-        /UwLRWzCbx+9qPmHaYGIbRS1OEdRi3MUtThHUYtzFLU4R1GLcxS1OCeImt/C8NsY0yIRmwRRc/5Lo1ri
-        giBqjsRwgsC0SMQW/P0Sf8fkRX399SBi9WXGhSK2OLJxJU48vORHzfmurb3aV4vddqejePp+2I+aMkMD
-        iNeXGxeLhF2qrATtd8/mzyhypGtffzvSxUuMDxIJK44hVmUSwQU3QdTE+a6ai40aGBBrMOgd3Q0Y/jQa
-        dJwXNY18fufd/ZHYvt74JCJh0Va6wnuH/jdoKoiauBXpfXID0a467xOlpswlLDihxWvweB1e8naX8U49
-        Y9R/8BXAI5JN2bh3qC0y0zh6yAtLeXGpqVmaMmoRGylqcY6iFucoanGOohbH5PAbrv9smt2mnCIAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
 </root>

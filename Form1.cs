@@ -26,9 +26,6 @@ namespace RIOFLIX123
             usersignup us = new usersignup();
             us.Show();
             
-            
-
-
         }
 
         private async void button1_Click(object sender, EventArgs e)
@@ -72,6 +69,11 @@ namespace RIOFLIX123
         }
 
         private void bunifuProgressBar1_progressChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usersignup1_Load(object sender, EventArgs e)
         {
 
         }

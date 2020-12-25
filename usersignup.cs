@@ -33,6 +33,8 @@ namespace RIOFLIX123
             else
             {
                 MessageBox.Show("Passwords donot match");
+               // loginformUSER l = new loginformUSER();
+                //l.Show();
             }
         }
 
