@@ -103,8 +103,8 @@ namespace RIOFLIX123
 
         protected IFirebaseConfig config = new FirebaseConfig
         {
-            AuthSecret = "VIB4QyeoIjd43kf2yFcU7l9ynqtKSJPF3fplsdUp",
-            BasePath = "https://fir-fast-36fe8.firebaseio.com/"
+            AuthSecret = "y4RjXMGpXFsmuG4T0pMLmWIBtcQ6V84ke4uJ3hCT",
+            BasePath = "https://rioflix-default-rtdb.firebaseio.com/"
         };
         public IFirebaseConfig getConfig()
         {

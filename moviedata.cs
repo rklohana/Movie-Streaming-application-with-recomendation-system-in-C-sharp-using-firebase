@@ -18,11 +18,19 @@ namespace RIOFLIX123
 {
     class moviedata
     {
-        public static int m_id = 0;
-        public int getm_id()
+        private string m_id;
+        public string M_id
         {
-            return m_id;
+            get
+            {
+                return m_id;
+            }
+            set
+            {
+                m_id = value;
+            }
         }
+
 
         private string name;
         public string Name { get
@@ -45,8 +53,8 @@ namespace RIOFLIX123
                 description = value;
             }
         }
-        private string[] director;
-        public string[] Director
+        private string director;
+        public string Director
         {
             get
             {
@@ -57,8 +65,8 @@ namespace RIOFLIX123
                 director = value;
             }
         }
-        private string[] genre;
-        public string[] Genre
+        private string genre;
+        public string Genre
         {
             get
             {
@@ -69,8 +77,8 @@ namespace RIOFLIX123
                 genre = value;
             }
         }
-        private string[] keyword;
-        public string[] Keyword
+        private string keyword;
+        public string Keyword
         {
             get
             {
@@ -81,8 +89,8 @@ namespace RIOFLIX123
                 keyword = value;
             }
         }
-        private string[] actor;
-        public string[] Actor
+        private string actor;
+        public string Actor
         {
             get
             {
@@ -119,10 +127,35 @@ namespace RIOFLIX123
                 videofile = value;
             }
         }
+        
+        private int rate;
+        public int Rate
+        {
+            get
+            {
+                return rate;
+            }
+            set
+            {
+                rate = value;
+            }
+        }
+        private int viewrate;
+        public int Viewrate
+        {
+            get
+            {
+                return viewrate;
+            }
+            set
+            {
+                viewrate = value;
+            }
+        }
         public IFirebaseClient client;
 
 
-        public IFirebaseConfig config = new FirebaseConfig
+        protected IFirebaseConfig config = new FirebaseConfig
         {
             AuthSecret = "y4RjXMGpXFsmuG4T0pMLmWIBtcQ6V84ke4uJ3hCT",
             BasePath = "https://rioflix-default-rtdb.firebaseio.com/"
@@ -134,12 +167,12 @@ namespace RIOFLIX123
         }
         public moviedata()
         {
-            m_id++;
+         
             client = new FireSharp.FirebaseClient(config);
-            if (client != null)
+            if (client == null)
             {
 
-                MessageBox.Show("Connected");
+                MessageBox.Show("Not Connected");
             }
         }
         public string photoconvert(Bitmap i)
@@ -163,14 +196,14 @@ namespace RIOFLIX123
 
 
       
-        public async void adddata(moviedata md, string b)
+        public async void adddata(moviedata md)
         {
             try
             {
-                SetResponse response = await client.SetAsync("Movie DATA/" + b, md);
+                SetResponse response = await client.SetAsync("Movie DATA/" + name, md);
                 moviedata result = response.ResultAs<moviedata>();
-                MessageBox.Show(name);
-                MessageBox.Show("Data inserted");
+               // MessageBox.Show(name);
+             //   MessageBox.Show("Data inserted");
             }
             catch(Exception eeee)
             {
@@ -192,8 +225,12 @@ namespace RIOFLIX123
             //  MessageBox.Show("Data updated");
 
         }
-        public void setdata(string n, string[] d, string[] g, string[] c, string[] k,string des,string v,string i)
+        public void setdata(string n, string d, string g, string c, string k,string des,string v,string i)
         {
+            counter1 c2 = new counter1();
+            c2.retrivevalues();
+            m_id = c2.getmovid();
+            c2.movieincrease(c2);
             name = n;
             director =  d ;
             genre = g;

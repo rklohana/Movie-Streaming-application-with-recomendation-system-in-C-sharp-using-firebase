@@ -63,7 +63,7 @@ namespace RIOFLIX123
             // 
             // mobiletext
             // 
-            this.mobiletext.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.mobiletext.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.mobiletext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.mobiletext.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mobiletext.ForeColor = System.Drawing.Color.White;
@@ -94,7 +94,7 @@ namespace RIOFLIX123
             // 
             // passwordtext
             // 
-            this.passwordtext.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.passwordtext.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.passwordtext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.passwordtext.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordtext.ForeColor = System.Drawing.Color.White;

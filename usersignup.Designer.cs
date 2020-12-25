@@ -48,8 +48,7 @@
             // 
             // bunifuGradientPanel1
             // 
-            this.bunifuGradientPanel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel5);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel6);
@@ -81,6 +80,7 @@
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.bunifuCustomLabel5.Location = new System.Drawing.Point(32, 264);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(178, 23);
@@ -92,6 +92,7 @@
             this.bunifuCustomLabel6.AutoSize = true;
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.bunifuCustomLabel6.Location = new System.Drawing.Point(115, 223);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(101, 23);
@@ -103,6 +104,7 @@
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.bunifuCustomLabel3.Location = new System.Drawing.Point(144, 182);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(66, 23);
@@ -114,6 +116,7 @@
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.bunifuCustomLabel4.Location = new System.Drawing.Point(121, 141);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(89, 23);
@@ -125,6 +128,7 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.bunifuCustomLabel2.Location = new System.Drawing.Point(131, 100);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(79, 23);
@@ -136,6 +140,7 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(138, 59);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(72, 23);
@@ -148,7 +153,7 @@
             this.conpasstext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.conpasstext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.conpasstext.ForeColor = System.Drawing.Color.Maroon;
-            this.conpasstext.HintForeColor = System.Drawing.Color.Empty;
+            this.conpasstext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.conpasstext.HintText = "";
             this.conpasstext.isPassword = true;
             this.conpasstext.LineFocusedColor = System.Drawing.Color.Blue;
@@ -168,7 +173,7 @@
             this.passtext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.passtext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.passtext.ForeColor = System.Drawing.Color.Maroon;
-            this.passtext.HintForeColor = System.Drawing.Color.Empty;
+            this.passtext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.passtext.HintText = "";
             this.passtext.isPassword = true;
             this.passtext.LineFocusedColor = System.Drawing.Color.Blue;
@@ -187,9 +192,9 @@
             this.signupbutt.ActiveBorderThickness = 1;
             this.signupbutt.ActiveCornerRadius = 20;
             this.signupbutt.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.signupbutt.ActiveForecolor = System.Drawing.Color.White;
+            this.signupbutt.ActiveForecolor = System.Drawing.Color.Transparent;
             this.signupbutt.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.signupbutt.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.signupbutt.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.signupbutt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("signupbutt.BackgroundImage")));
             this.signupbutt.ButtonText = "Sign Up";
             this.signupbutt.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -198,8 +203,8 @@
             this.signupbutt.IdleBorderThickness = 1;
             this.signupbutt.IdleCornerRadius = 20;
             this.signupbutt.IdleFillColor = System.Drawing.Color.Maroon;
-            this.signupbutt.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.signupbutt.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.signupbutt.IdleForecolor = System.Drawing.SystemColors.AppWorkspace;
+            this.signupbutt.IdleLineColor = System.Drawing.Color.Transparent;
             this.signupbutt.Location = new System.Drawing.Point(255, 354);
             this.signupbutt.Margin = new System.Windows.Forms.Padding(5);
             this.signupbutt.Name = "signupbutt";
@@ -213,7 +218,7 @@
             this.emailtext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.emailtext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.emailtext.ForeColor = System.Drawing.Color.Maroon;
-            this.emailtext.HintForeColor = System.Drawing.Color.Empty;
+            this.emailtext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.emailtext.HintText = "";
             this.emailtext.isPassword = false;
             this.emailtext.LineFocusedColor = System.Drawing.Color.Blue;
@@ -232,7 +237,7 @@
             this.addresstext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.addresstext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.addresstext.ForeColor = System.Drawing.Color.Maroon;
-            this.addresstext.HintForeColor = System.Drawing.Color.Empty;
+            this.addresstext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.addresstext.HintText = "";
             this.addresstext.isPassword = false;
             this.addresstext.LineFocusedColor = System.Drawing.Color.Blue;
@@ -251,7 +256,7 @@
             this.mobiletext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.mobiletext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.mobiletext.ForeColor = System.Drawing.Color.Maroon;
-            this.mobiletext.HintForeColor = System.Drawing.Color.Empty;
+            this.mobiletext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.mobiletext.HintText = "";
             this.mobiletext.isPassword = false;
             this.mobiletext.LineFocusedColor = System.Drawing.Color.Blue;
@@ -270,7 +275,7 @@
             this.nametext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nametext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.nametext.ForeColor = System.Drawing.Color.Maroon;
-            this.nametext.HintForeColor = System.Drawing.Color.Empty;
+            this.nametext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.nametext.HintText = "";
             this.nametext.isPassword = false;
             this.nametext.LineFocusedColor = System.Drawing.Color.Blue;

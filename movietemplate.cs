@@ -22,7 +22,30 @@ namespace RIOFLIX123
             InitializeComponent();
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        moviedata md = new moviedata();
+        public IFirebaseClient client;
+        private  void movietemplate_Load(object sender, EventArgs e)
+        {
+            bunifuProgressBar1.Hide();
+            bunifuThinButton21.Hide();
+            bunifuThinButton22.Hide();
+
+
+        }
+
+       
+
+        private void bunifuMaterialTextbox5_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addimage_Click(object sender, EventArgs e)
         {
             OpenFileDialog on = new OpenFileDialog();
             on.Title = "Photo";
@@ -31,10 +54,11 @@ namespace RIOFLIX123
             {
                 Image ir = new Bitmap(on.FileName);
                 pictureBox1.Image = ir.GetThumbnailImage(128, 130, null, new IntPtr());
+                trans1.ShowSync(bunifuThinButton21);
             }
         }
 
-        private async void bunifuFlatButton2_Click(object sender, EventArgs e)
+        private async void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             OpenFileDialog im = new OpenFileDialog();
             im.Title = "Select";
@@ -52,7 +76,7 @@ namespace RIOFLIX123
                             .Child(im.FileName)
                             .PutAsync(stream);
 
-                    bunifuProgressBar1.Show();
+                    trans1.ShowSync(bunifuProgressBar1);
                     task.Progress.ProgressChanged += (s, rk) => bunifuProgressBar1.Value = rk.Percentage;
 
 
@@ -61,53 +85,31 @@ namespace RIOFLIX123
                     var downloadUrl = await task;
                     url = downloadUrl;
                     bunifuProgressBar1.Hide();
+                    trans1.ShowSync(bunifuThinButton22);
+                   // bunifuThinButton22.Show();
                 }
-                catch ( Exception es) {
+                catch (Exception es)
+                {
                     var msg = es;
                     MessageBox.Show("Internet error");
 
-                       }
+                }
 
             }
         }
-        moviedata md = new moviedata();
-        public IFirebaseClient client;
-        private async void movietemplate_Load(object sender, EventArgs e)
-        {
-            bunifuProgressBar1.Hide();
-            
-            client = new FireSharp.FirebaseClient(md.config);
-            if (client == null)
-            {
 
-                MessageBox.Show("error Connecting");
-            }
-
-        }
-
-        private async void bunifuFlatButton3_Click(object sender, EventArgs e)
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
             moviedata md = new moviedata();
-            string[] genre = genretext.Text.Split(',','|');
-            string[] director = creatortext.Text.Split(',','|');
-            string[] actor = startext.Text.Split(',', '|');
-            string[] keyword = keywordtext.Text.Split(',', '|');
+            
             string img;
             Bitmap image = new Bitmap(pictureBox1.Image);
             img = md.photoconvert(image);
-            md.setdata(nametext.Text, director, genre, actor, keyword, descriptext.Text, url, img);
-            md.adddata(md, "1");
-            foreach(string j in director)
-            {
-                MessageBox.Show(j);
-            }
-            MessageBox.Show("Done");
+            md.setdata(nametext.Text, creatortext.Text, genretext.Text, startext.Text, keywordtext.Text, descriptext.Text, url, img);
+            
+            md.adddata(md);
+          
             this.Hide();
-        }
-
-        private void bunifuMaterialTextbox5_OnValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
