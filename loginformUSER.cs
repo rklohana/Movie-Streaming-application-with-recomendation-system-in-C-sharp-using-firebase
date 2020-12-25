@@ -26,5 +26,10 @@ namespace RIOFLIX123
             userlogin us = new userlogin();
             us.Show();
         }
+
+        private void userlogin1_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello world");
+        }
     }
 }

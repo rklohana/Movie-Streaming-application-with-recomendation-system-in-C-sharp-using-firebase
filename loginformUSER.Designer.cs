@@ -39,6 +39,7 @@ namespace RIOFLIX123
             this.userlogin1.Name = "userlogin1";
             this.userlogin1.Size = new System.Drawing.Size(475, 350);
             this.userlogin1.TabIndex = 0;
+            this.userlogin1.Load += new System.EventHandler(this.userlogin1_Load);
             // 
             // loginformUSER
             // 
