@@ -162,10 +162,7 @@ namespace RIOFLIX123
         }
 
 
-        public async void addmultidata(moviedata m)
-        {
-
-        }
+      
         public async void adddata(moviedata md, string b)
         {
             try
