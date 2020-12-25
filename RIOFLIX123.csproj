@@ -234,6 +234,13 @@
     <Compile Include="loginformUSER.Designer.cs">
       <DependentUpon>loginformUSER.cs</DependentUpon>
     </Compile>
+    <Compile Include="moviedata.cs" />
+    <Compile Include="movietemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="movietemplate.Designer.cs">
+      <DependentUpon>movietemplate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="userlogin.cs">
@@ -253,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="loginformUSER.resx">
       <DependentUpon>loginformUSER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="movietemplate.resx">
+      <DependentUpon>movietemplate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

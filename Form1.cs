@@ -23,12 +23,36 @@ namespace RIOFLIX123
 
         private  void Form1_Load(object sender, EventArgs e)
         {
-            usersignup us = new usersignup();
-            us.Show();
+        
             
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void colorSlider1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void bunifuProgressBar1_progressChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usersignup1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usersignup1_Load_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private async void button1_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog im = new OpenFileDialog();
             im.Title = "Select";
@@ -45,36 +69,26 @@ namespace RIOFLIX123
                         .Child("project")
                         .Child(im.FileName)
                         .PutAsync(stream);
-                    
 
-                    task.Progress.ProgressChanged += (s, rk) =>MessageBox.Show( "{rk.Percentage}");
+
+                    task.Progress.ProgressChanged += (s, rk) => bunifuProgressBar1.Value = rk.Percentage;
+              
 
 
 
                     var downloadUrl = await task;
+                    axWindowsMediaPlayer1.URL = downloadUrl;
+                    stream = null;
+                    GC.Collect();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
+                    var msg = ex;
                     MessageBox.Show("some error");
                 }
-               
-                
+
+
             }
-
-        }
-
-        private void colorSlider1_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
-
-        private void bunifuProgressBar1_progressChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usersignup1_Load(object sender, EventArgs e)
-        {
 
         }
     }
