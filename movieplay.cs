@@ -41,7 +41,7 @@ namespace RIOFLIX123
             set
             {
                 icon = value;
-                pictureBox1.Image = value;
+                bunifuImageButton1.Image = value;
             }
         }
 
@@ -71,6 +71,29 @@ namespace RIOFLIX123
 
                 MessageBox.Show("error Connecting");
             }
+        }
+        
+        private async void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            moviedisplay m2 = new moviedisplay();
+            try
+            {
+                FirebaseResponse r = await client.GetAsync("Movie DATA / " + nametext);
+                moviedata obj = r.ResultAs<moviedata>();
+                m2.Nametext = obj.Name;
+                m2.Directortext = obj.Director;
+                m2.Genretext = obj.Genre;
+                m2.Startext = obj.Actor;
+                m2.Descriptiontext = obj.Description;
+                m2.Icon = icon;
+                m2.ratetext = obj.Rate;
+                bunifuTransition1.ShowSync(m2);
+            }
+            catch
+            {
+                MessageBox.Show("Internet Error");
+            }
+
         }
     }
 }

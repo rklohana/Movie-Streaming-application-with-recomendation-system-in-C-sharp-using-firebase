@@ -50,13 +50,14 @@ namespace RIOFLIX123
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.trans1 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.trans1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(122, 132);
             this.pictureBox1.TabIndex = 0;
@@ -67,7 +68,7 @@ namespace RIOFLIX123
             this.label1.AutoSize = true;
             this.trans1.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(139, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 19);
@@ -79,7 +80,7 @@ namespace RIOFLIX123
             this.label2.AutoSize = true;
             this.trans1.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(139, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 19);
@@ -91,7 +92,7 @@ namespace RIOFLIX123
             this.label3.AutoSize = true;
             this.trans1.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(139, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 19);
@@ -103,7 +104,7 @@ namespace RIOFLIX123
             this.label4.AutoSize = true;
             this.trans1.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(139, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 19);
@@ -115,7 +116,7 @@ namespace RIOFLIX123
             this.label5.AutoSize = true;
             this.trans1.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(139, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 19);
@@ -263,7 +264,7 @@ namespace RIOFLIX123
             this.label6.AutoSize = true;
             this.trans1.SetDecoration(this.label6, BunifuAnimatorNS.DecorationType.None);
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(139, 229);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 19);
@@ -279,15 +280,15 @@ namespace RIOFLIX123
             this.addimage.ActiveLineColor = System.Drawing.Color.Maroon;
             this.addimage.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.addimage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addimage.BackgroundImage")));
-            this.addimage.ButtonText = "Add Image";
+            this.addimage.ButtonText = "Poster";
             this.addimage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trans1.SetDecoration(this.addimage, BunifuAnimatorNS.DecorationType.None);
-            this.addimage.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addimage.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.addimage.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addimage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.addimage.IdleBorderThickness = 1;
             this.addimage.IdleCornerRadius = 20;
             this.addimage.IdleFillColor = System.Drawing.Color.Maroon;
-            this.addimage.IdleForecolor = System.Drawing.SystemColors.AppWorkspace;
+            this.addimage.IdleForecolor = System.Drawing.SystemColors.ButtonHighlight;
             this.addimage.IdleLineColor = System.Drawing.Color.Maroon;
             this.addimage.Location = new System.Drawing.Point(5, 143);
             this.addimage.Margin = new System.Windows.Forms.Padding(5);
@@ -309,8 +310,8 @@ namespace RIOFLIX123
             this.bunifuThinButton21.ButtonText = "Add Video";
             this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trans1.SetDecoration(this.bunifuThinButton21, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuThinButton21.IdleBorderThickness = 1;
             this.bunifuThinButton21.IdleCornerRadius = 20;
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Maroon;
@@ -337,8 +338,8 @@ namespace RIOFLIX123
             this.bunifuThinButton22.ButtonText = "Done";
             this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trans1.SetDecoration(this.bunifuThinButton22, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuThinButton22.IdleBorderThickness = 1;
             this.bunifuThinButton22.IdleCornerRadius = 20;
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Maroon;
@@ -372,6 +373,12 @@ namespace RIOFLIX123
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.trans1.DefaultAnimation = animation1;
+            this.trans1.Interval = 30;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 40;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // movietemplate
             // 
@@ -399,7 +406,7 @@ namespace RIOFLIX123
             this.trans1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "movietemplate";
-            this.Size = new System.Drawing.Size(676, 334);
+            this.Size = new System.Drawing.Size(587, 334);
             this.Load += new System.EventHandler(this.movietemplate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -427,5 +434,6 @@ namespace RIOFLIX123
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
         private BunifuAnimatorNS.BunifuTransition trans1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

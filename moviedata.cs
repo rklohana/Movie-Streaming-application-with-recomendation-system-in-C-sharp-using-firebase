@@ -213,14 +213,14 @@ namespace RIOFLIX123
 
         public async void deletedata(string a)
         {
-            FirebaseResponse r = await client.DeleteAsync("Moviedata DATA/" + a);
+            FirebaseResponse r = await client.DeleteAsync("Movie DATA/" + a);
             //   MessageBox.Show("Data deleted");
 
         }
         public async void updatedata(string a, moviedata b)
         {
             MessageBox.Show("CALLed");
-            FirebaseResponse r = await client.UpdateAsync("Moviedata DATA/" + a, b);
+            FirebaseResponse r = await client.UpdateAsync("Movie DATA/" + a, b);
             moviedata obj = r.ResultAs<moviedata>();
             //  MessageBox.Show("Data updated");
 
@@ -239,6 +239,20 @@ namespace RIOFLIX123
             description = des;
             videofile = v;
             imagefile = i;
+            rate = 0;
+            viewrate = 0;
+        }
+        public async void retrivevalues(string name)
+        {
+            try
+            {
+                FirebaseResponse r = await client.GetAsync("Movie DATA/" + name);
+                counter1 obj = r.ResultAs<counter1>();
+            }
+            catch
+            {
+                MessageBox.Show("Internet Error");
+            }
         }
     }
 }

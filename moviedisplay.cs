@@ -103,20 +103,82 @@ namespace RIOFLIX123
         }
 
 
+
+        [Category("Customs props")]
+        public int ratetext
+        {
+            get
+            {
+                return ratetext;
+            }
+            set
+            {
+                ratetext = value;
+                bunifuSlider1.Value = value;
+            }
+        }
+
+
+
+
         #endregion
         public moviedisplay()
         {
             InitializeComponent();
         }
-
-        private void moviedisplay_Load(object sender, EventArgs e)
+        moviedata obj;
+        private async void moviedisplay_Load(object sender, EventArgs e)
         {
             client = new FireSharp.FirebaseClient(c2.getConfig());
             if (client == null)
             {
 
                 MessageBox.Show("error Connecting");
+
             }
+            try
+            {
+                FirebaseResponse r = await client.GetAsync("Movie DATA/" + nametext);
+                 obj = r.ResultAs<moviedata>();
+            }
+            catch
+            {
+                MessageBox.Show("Internet Error");
+            }
+
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void bunifuSlider1_ValueChanged(object sender, EventArgs e)
+        {
+            obj.Rate += bunifuSlider1.Value;
+            obj.Viewrate++;
+            int r = obj.Rate / obj.Viewrate;
+            obj.Rate = r;
+            obj.Viewrate = 1;
+        }
+
+        private void mylistbutton_Click(object sender, EventArgs e)
+        {
+            playlist pl = new playlist();
+            pl.adddatalist(pl, nametext);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            playlist pl = new playlist();
+            pl.retrivevalues();
+            pl.adddatahist(pl, nametext);
+            var url = obj.Videofile;
         }
     }
 }
