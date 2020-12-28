@@ -29,7 +29,7 @@ namespace RIOFLIX123
         {
             try
             {
-                var str1 = ",Toy Story,jumanji,sabrina";
+                var str1 = "Toy Story,jumanji,sabrina";
                 playlist pp = new playlist();
                 pp.retrivevalues();
                 var movienames = str1.Split(',');
@@ -60,6 +60,7 @@ namespace RIOFLIX123
                 }
                 similartotext.Text += ' ' + st1.Peek() + " :";
                 populatelist();
+                MessageBox.Show("done");
             }
             catch { 
             }
