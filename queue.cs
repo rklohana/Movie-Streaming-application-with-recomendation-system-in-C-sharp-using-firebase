@@ -23,9 +23,10 @@ namespace RIOFLIX123
         {
             QNode front;
             QNode rear;
-
+        int cont;
             public Queue()
             {
+            cont = 0;
                 this.front = this.rear = null;
             }
 
@@ -44,41 +45,65 @@ namespace RIOFLIX123
                     this.rear.next = newNode;
                     this.rear = newNode;
                 }
-                Console.WriteLine("{0} inserted into Queue", item);
+            cont++;
+                //Console.WriteLine("{0} inserted into Queue", item);
             }
 
-            internal void Dequeue()
+            public string Dequeue()
             {
                 // If queue is empty, return NULL.  
                 if (this.front == null)
                 {
-                    Console.WriteLine("The Queue is empty");
-                    return;
+                    //Console.WriteLine("The Queue is empty");
+                    return null;
                 }
 
                 // Store previous front and move front one node ahead  
                 QNode temp = this.front;
                 this.front = this.front.next;
-
+            cont--;
                 // If front becomes NULL, then change rear also as NULL  
                 if (this.front == null)
                 {
                     this.rear = null;
                 }
 
-                Console.WriteLine("Item deleted is {0}", temp.data);
+            //Console.WriteLine("Item deleted is {0}", temp.data);
+            return temp.data;
             }
-            internal void Peek()
+            public string Peek()
             {
                 if (front == null)
                 {
-                    Console.WriteLine("Stack Underflow.");
-                    return;
+                    //Console.WriteLine("Stack Underflow.");
+                    return null;
                 }
 
-                Console.WriteLine("{0} is on the front of Queue", this.front.data);
-            }
+            // Console.WriteLine("{0} is on the front of Queue", this.front.data);
+            return front.data;
         }
+
+
+        public bool isempty()
+        {
+            if (front == null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+        public int getsize()
+        {
+            return cont;
+        }
+
+
+
+
+
+    }
 
 
 

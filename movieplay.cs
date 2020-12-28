@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ using System.Windows.Forms;
 using FireSharp.Config;
 using FireSharp.Response;
 using FireSharp.Interfaces;
+using System.IO;
 
 namespace RIOFLIX123
 {
@@ -95,5 +97,18 @@ namespace RIOFLIX123
             }
 
         }
+
+
+        public Image showphoto(string a)
+        {
+            byte[] b = Convert.FromBase64String(a);
+            MemoryStream m = new MemoryStream();
+            m.Write(b, 0, Convert.ToInt32(b.Length));
+            Bitmap bm = new Bitmap(m, false);
+            m.Dispose();
+            // pictureBox1.Image = bm;
+            return bm;
+        }
+
     }
 }

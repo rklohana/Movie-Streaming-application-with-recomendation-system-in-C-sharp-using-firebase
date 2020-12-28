@@ -46,7 +46,7 @@
             this.bunifuTransition1.SetDecoration(this.name, BunifuAnimatorNS.DecorationType.None);
             this.name.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.name.Location = new System.Drawing.Point(32, 135);
+            this.name.Location = new System.Drawing.Point(17, 108);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(86, 16);
             this.name.TabIndex = 1;
@@ -70,7 +70,7 @@
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(3, 0);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(150, 168);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(109, 168);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 4;
             this.bunifuImageButton1.TabStop = false;
@@ -79,8 +79,8 @@
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 200;
-            this.bunifuElipse1.TargetControl = this;
+            this.bunifuElipse1.ElipseRadius = 100;
+            this.bunifuElipse1.TargetControl = null;
             // 
             // bunifuTransition1
             // 
@@ -94,7 +94,7 @@
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
@@ -110,12 +110,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.name);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuImageButton1);
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.Name = "movieplay";
-            this.Size = new System.Drawing.Size(156, 171);
+            this.Size = new System.Drawing.Size(115, 171);
             this.Load += new System.EventHandler(this.movieplay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);

@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.movietemplate1 = new RIOFLIX123.movietemplate();
+            this.mainpagedisplay1 = new RIOFLIX123.mainpagedisplay();
             this.SuspendLayout();
             // 
-            // movietemplate1
+            // mainpagedisplay1
             // 
-            this.movietemplate1.Location = new System.Drawing.Point(91, 12);
-            this.movietemplate1.Name = "movietemplate1";
-            this.movietemplate1.Size = new System.Drawing.Size(676, 334);
-            this.movietemplate1.TabIndex = 0;
+            this.mainpagedisplay1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.mainpagedisplay1.Location = new System.Drawing.Point(59, 1);
+            this.mainpagedisplay1.Name = "mainpagedisplay1";
+            this.mainpagedisplay1.Size = new System.Drawing.Size(411, 405);
+            this.mainpagedisplay1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.movietemplate1);
+            this.ClientSize = new System.Drawing.Size(800, 587);
+            this.Controls.Add(this.mainpagedisplay1);
+            this.HelpButton = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -53,7 +55,7 @@
 
         #endregion
 
-        private movietemplate movietemplate1;
+        private mainpagedisplay mainpagedisplay1;
     }
 }
 
