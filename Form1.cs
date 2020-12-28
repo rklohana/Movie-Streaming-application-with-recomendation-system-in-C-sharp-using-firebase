@@ -25,8 +25,6 @@ namespace RIOFLIX123
         {
             movietemplate mt = new movietemplate();
             mt.Hide();
-            movieshowall us = new movieshowall();
-            us.Show();
             
         }
 

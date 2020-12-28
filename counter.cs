@@ -152,8 +152,6 @@ namespace RIOFLIX123
             {
                 FirebaseResponse r = await client.GetAsync("Counter DATA/");
                 counter1 obj = r.ResultAs<counter1>();
-                MessageBox.Show("retrieved successfully");
-                MessageBox.Show(movid);
             }
             catch
             {

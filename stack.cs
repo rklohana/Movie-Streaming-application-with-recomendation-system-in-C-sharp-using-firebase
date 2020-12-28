@@ -22,10 +22,9 @@ namespace RIOFLIX123
         internal class Stack
         {
             Node top;
-            int cont;
+
             public Stack()
             {
-            cont = 0;
                 this.top = null;
             }
             internal void Push(string value)
@@ -40,47 +39,31 @@ namespace RIOFLIX123
                     newNode.next = top;
                 }
                 top = newNode;
-            cont++;
-               // Console.WriteLine("{0} pushed to stack", value);
+                Console.WriteLine("{0} pushed to stack", value);
             }
 
-           public string Pop()
+            internal void Pop()
             {
                 if (top == null)
                 {
-                //    Console.WriteLine("Stack Underflow. Deletion not possible");
-                return null ;
+                    Console.WriteLine("Stack Underflow. Deletion not possible");
+                    return;
                 }
-            cont--;
-            var n = top.data;
-              //  Console.WriteLine("Item popped is {0}", top.data);
+
+                Console.WriteLine("Item popped is {0}", top.data);
                 top = top.next;
-            return n;
             }
-            bool isempty()
-        {
-            if (top == null)
-            {
-                return true;
-            }
-            return false;
-        }
-            public string Peek()
+
+            internal void Peek()
             {
                 if (top == null)
                 {
-                /// Console.WriteLine("Stack Underflow.");
-                return null ;
+                    Console.WriteLine("Stack Underflow.");
+                    return;
                 }
-            return top.data;
 
-                //Console.WriteLine("{0} is on the top of Stack", this.top.data);
+                Console.WriteLine("{0} is on the top of Stack", this.top.data);
             }
-
-        public int getsize()
-        {
-            return cont;
-        }
         }
     }
 

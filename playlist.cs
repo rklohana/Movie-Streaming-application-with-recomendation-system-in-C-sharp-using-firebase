@@ -11,55 +11,7 @@ using System.Windows.Forms;
 namespace RIOFLIX123
 {
     class playlist
-    {   
-        private static string usname;
-        public string Usname {
-            get
-            {
-                return usname;
-            }
-            set
-            {
-                usname = value;
-            }
-        
-        }
-        public async void adddatamoviest(playlist md, string movname)
-        {
-            try
-            {
-                md.retrivevalues();
-                md.MovName += "," + movname;
-                SetResponse response = await client.SetAsync("Playlist/" + usname, md);
-                playlist result = response.ResultAs<playlist>();
-                // MessageBox.Show(name);
-                //   MessageBox.Show("Data inserted");
-            }
-            catch (Exception eeee)
-            {
-                var ex = eeee;
-                MessageBox.Show("Error");
-            }
-        }
-
-        private static string movname;
-        public string MovName
-        {
-            get
-            {
-                return movname;
-            }
-            set
-            {
-                movname = value;
-            }
-        }
-
-
-
-
-
-
+    {
         private static string listname;
         public string ListName
         {
@@ -109,7 +61,7 @@ namespace RIOFLIX123
             {
                 md.retrivevalues();
                 md.ListName += "," + movname;
-                SetResponse response = await client.SetAsync("Playlist/"+usname, md);
+                SetResponse response = await client.SetAsync("Playlist/", md);
                 playlist result = response.ResultAs<playlist>();
                 // MessageBox.Show(name);
                 //   MessageBox.Show("Data inserted");
@@ -124,8 +76,8 @@ namespace RIOFLIX123
         {
             try
             {
-                FirebaseResponse r = await client.GetAsync("Playlist/"+usname);
-                playlist obj = r.ResultAs<playlist>();
+                FirebaseResponse r = await client.GetAsync("Playlist/");
+                counter1 obj = r.ResultAs<counter1>();
             }
             catch
             {
@@ -139,10 +91,9 @@ namespace RIOFLIX123
         {
             try
             {
-              
                 md.retrivevalues();
                 md.HistName += "," + movname;
-                SetResponse response = await client.SetAsync("Playlist/"+usname, md);
+                SetResponse response = await client.SetAsync("Playlist/", md);
                 playlist result = response.ResultAs<playlist>();
                 // MessageBox.Show(name);
                 //   MessageBox.Show("Data inserted");
@@ -151,17 +102,6 @@ namespace RIOFLIX123
             {
                 var ex = eeee;
                 MessageBox.Show("Error");
-            }
-        }
-
-        public playlist()
-        {
-            
-            client = new FireSharp.FirebaseClient(config);
-            if (client == null)
-            {
-
-                MessageBox.Show("not Connected");
             }
         }
 

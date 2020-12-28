@@ -31,7 +31,6 @@ namespace RIOFLIX123
                 {
                     if (obj.getpass() == passwordtext.Text)
                     {
-                     playlist p1= new playlist();
                     
                     }
                 }
