@@ -108,8 +108,8 @@ namespace RIOFLIX123
             md.setdata(nametext.Text, creatortext.Text, genretext.Text, startext.Text, keywordtext.Text, descriptext.Text, url, img);
             
             md.adddata(md);
-          
-            this.Hide();
+
+            
         }
     }
 }

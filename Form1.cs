@@ -62,21 +62,14 @@ namespace RIOFLIX123
             {
                 try
                 {
-
-
                     var stream = File.Open(im.FileName, FileMode.Open);
                     var task = new FirebaseStorage("fir-fast-36fe8.appspot.com")
                         .Child("data")
                         .Child("project")
                         .Child(im.FileName)
                         .PutAsync(stream);
-
                     int value;
                     task.Progress.ProgressChanged += (s, rk) =>  value= rk.Percentage;
-              
-
-
-
                     var downloadUrl = await task;
                     //axWindowsMediaPlayer1.URL = downloadUrl;
                     stream = null;

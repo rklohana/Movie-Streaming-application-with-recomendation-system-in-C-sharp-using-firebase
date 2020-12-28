@@ -200,10 +200,14 @@ namespace RIOFLIX123
         {
             try
             {
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine("movienames.txt"),true))
+                {
+                        outputFile.WriteLine(name);
+                }
                 SetResponse response = await client.SetAsync("Movie DATA/" + name, md);
                 moviedata result = response.ResultAs<moviedata>();
                // MessageBox.Show(name);
-             //   MessageBox.Show("Data inserted");
+             MessageBox.Show("Data inserted");
             }
             catch(Exception eeee)
             {
