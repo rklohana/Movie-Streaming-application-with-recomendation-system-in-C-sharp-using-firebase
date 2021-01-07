@@ -33,10 +33,14 @@
             // 
             // movietemplate1
             // 
+            this.movietemplate1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.movietemplate1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.movietemplate1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.movietemplate1.Location = new System.Drawing.Point(91, 12);
             this.movietemplate1.Name = "movietemplate1";
             this.movietemplate1.Size = new System.Drawing.Size(676, 334);
             this.movietemplate1.TabIndex = 0;
+            this.movietemplate1.Load += new System.EventHandler(this.movietemplate1_Load);
             // 
             // Form1
             // 

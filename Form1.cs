@@ -85,5 +85,10 @@ namespace RIOFLIX123
             }
 
         }
+
+        private void movietemplate1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
