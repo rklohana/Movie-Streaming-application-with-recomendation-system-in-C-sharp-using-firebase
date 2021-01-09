@@ -13,18 +13,9 @@ namespace RIOFLIX123
 
   public  class counter1
     {
-        private int mov_id;
+       // private int mov_id;
         public int Mov_id {
-            get
-            {
-                return mov_id;
-            }
-            set
-            {
-                mov_id = value;
-            }
-        
-        
+            get; set;
         }
 
 
@@ -33,20 +24,16 @@ namespace RIOFLIX123
         {
             FirebaseResponse response = await client.GetAsync("Counter DATA/");
             counter1 c1 = response.ResultAs<counter1>();
-            mov_id = c1.getmovid();
-
-
+            Mov_id = c1.Mov_id;
+         //   MessageBox.Show(Mov_id.ToString());
+            return;
 
                 }
-        public int getmovid()
-        {
-            MessageBox.Show(mov_id.ToString());
-            return mov_id;
-        }
+        
 
         public  void increase()
         {
-            mov_id++;
+            Mov_id++;
            
             
         }
@@ -76,7 +63,7 @@ namespace RIOFLIX123
                
                 SetResponse response = await client.SetAsync("Counter DATA/", md);
                 counter1 result = response.ResultAs<counter1>();
-                // MessageBox.Show(name);
+                 MessageBox.Show(Mov_id.ToString());
                 
             }
             catch (Exception eeee)

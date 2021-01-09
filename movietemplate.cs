@@ -107,7 +107,7 @@ namespace RIOFLIX123
             img = md.photoconvert(image);
             md.setdata(nametext.Text, creatortext.Text, genretext.Text, startext.Text, keywordtext.Text, descriptext.Text, url, img);
             
-            md.adddata(md);
+            //md.adddata();
 
             
         }
