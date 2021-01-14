@@ -45,6 +45,18 @@ namespace RIOFLIX123
             }
         }
 
+        private string id;
+        [Category("Customs props")]
+        public string ID
+        {
+            get { return id; }
+            set
+            {
+                id = value;
+                
+            }
+        }
+
 
         #endregion
 
@@ -75,10 +87,10 @@ namespace RIOFLIX123
         
         private async void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            moviedisplay m2 = new moviedisplay();
+           moviedisplay m2 = new moviedisplay();
             try
             {
-                FirebaseResponse r = await client.GetAsync("Movie DATA / " + nametext);
+                FirebaseResponse r = await client.GetAsync("Movie DATA / " + id);
                 moviedata obj = r.ResultAs<moviedata>();
                 m2.Nametext = obj.Name;
                 m2.Directortext = obj.Director;
@@ -93,7 +105,7 @@ namespace RIOFLIX123
             {
                 MessageBox.Show("Internet Error");
             }
-
+         
         }
     }
 }

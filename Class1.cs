@@ -239,11 +239,11 @@ namespace RIOFLIX123
             Userdata result = response.ResultAs<Userdata>();
             //   MessageBox.Show(c.getemail());
         }
-        public async Task<Userdata> retrievedata(string a)
+        public async void retrievedata(string a)
         {
             FirebaseResponse r = await client.GetAsync("Userdata DATA/" + a);
             Userdata obj = r.ResultAs<Userdata>();
-            return obj;
+           
         }
         public async void deletedata(string a)
         {

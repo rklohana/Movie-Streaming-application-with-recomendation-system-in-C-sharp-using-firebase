@@ -226,7 +226,7 @@ namespace RIOFLIX123
             // 
             // bunifuProgressBar1
             // 
-            this.bunifuProgressBar1.BackColor = System.Drawing.Color.Silver;
+            this.bunifuProgressBar1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuProgressBar1.BorderRadius = 5;
             this.trans1.SetDecoration(this.bunifuProgressBar1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuProgressBar1.Location = new System.Drawing.Point(240, 300);
@@ -315,7 +315,7 @@ namespace RIOFLIX123
             this.bunifuThinButton21.IdleBorderThickness = 1;
             this.bunifuThinButton21.IdleCornerRadius = 20;
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Maroon;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.SystemColors.AppWorkspace;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Maroon;
             this.bunifuThinButton21.Location = new System.Drawing.Point(240, 257);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
@@ -343,7 +343,7 @@ namespace RIOFLIX123
             this.bunifuThinButton22.IdleBorderThickness = 1;
             this.bunifuThinButton22.IdleCornerRadius = 20;
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Maroon;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.SystemColors.AppWorkspace;
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Maroon;
             this.bunifuThinButton22.Location = new System.Drawing.Point(441, 257);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);

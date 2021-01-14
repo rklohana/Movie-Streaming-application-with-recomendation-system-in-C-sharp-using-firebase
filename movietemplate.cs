@@ -98,16 +98,25 @@ namespace RIOFLIX123
             }
         }
 
-        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        private async void bunifuThinButton22_Click(object sender, EventArgs e)
         {
             moviedata md = new moviedata();
-            
+            FirebaseResponse response = await client.GetAsync("Counter DATA/");
+            counter1 obj = response.ResultAs<counter1>();
+
+            int n = obj.Mov_id;
+            //    counter1 obj = new counter1();
+            //obj.retrivevalues();
+
+            // MessageBox.Show("setdata " + m_id.ToString());
+            obj.increase();
+            obj.adddata(obj);
             string img;
             Bitmap image = new Bitmap(pictureBox1.Image);
             img = md.photoconvert(image);
-            md.setdata(nametext.Text, creatortext.Text, genretext.Text, startext.Text, keywordtext.Text, descriptext.Text, url, img);
+            md.setdata(n,nametext.Text, creatortext.Text, genretext.Text, startext.Text, keywordtext.Text, descriptext.Text, url, img);
             
-            //md.adddata();
+            md.adddata();
 
             
         }

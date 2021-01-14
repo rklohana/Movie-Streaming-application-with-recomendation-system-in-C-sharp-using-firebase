@@ -6,72 +6,68 @@ using System.Threading.Tasks;
 
 namespace RIOFLIX123
 {
-        internal class SNode
+        public class SNode
         {
-            internal string data;
+            internal moviedata data;
             internal SNode next;
-            public SNode(string d)
-            {
-                data = d;
-                next = null;
-            }
+            internal SNode(moviedata newnode)
+        {
+            data = new moviedata();
+            data.setdata(newnode.M_id,newnode.Name,newnode.Director,newnode.Genre,newnode.Actor,newnode.Keyword,newnode.Description,newnode.Videofile,newnode.Imagefile);
+        }           
+            
         }
 
-        internal class SingleLinkedList
+        public class SingleLinkedList
         {
-            internal SNode head;
-
-        internal void InsertFront(string new_data)
+            internal SNode head,tail;
+        public SingleLinkedList()
+        {
+            head = null;
+            tail = null;
+        }
+     public   SNode gethead()
+        {
+            return head;
+        }
+        internal void InsertFront(moviedata new_data)
         {
             SNode new_node = new SNode(new_data);
+            
             new_node.next = head;
             head = new_node;
         }
 
-        internal void InsertLast(string new_data)
+        internal void InsertLast(moviedata new_data)
         {
             SNode new_node = new SNode(new_data);
+            
+            new_node.next = null;
             if (head == null)
             {
                 head = new_node;
+                tail = new_node;
                 return;
             }
-            SNode lastNode = GetLastNode(this);
-            lastNode.next = new_node;
+            tail.next = new_node;
+            tail = tail.next;
+            
         }
 
-        internal SNode GetLastNode(SingleLinkedList singlyList)
-        {
-            SNode temp = singlyList.head;
-            while (temp.next != null)
-            {
-                temp = temp.next;
-            }
-            return temp;
-        }
+       
 
-        internal void InsertAfter(SNode prev_node, string new_data)
-        {
-            if (prev_node == null)
-            {
-                Console.WriteLine("The given previous node Cannot be null");
-                return;
-            }
-            SNode new_node = new SNode(new_data);
-            new_node.next = prev_node.next;
-            prev_node.next = new_node;
-        }
+       
 
         internal void DeleteNodebyKey(string key)
         {
             SNode temp = head;
             SNode prev = null;
-            if (temp != null && temp.data == key)
+            if (temp != null && temp.data.M_id.ToString() == key)
             {
                 head = temp.next;
                 return;
             }
-            while (temp != null && temp.data != key)
+            while (temp != null && temp.data.M_id.ToString() != key)
             {
                 prev = temp;
                 temp = temp.next;

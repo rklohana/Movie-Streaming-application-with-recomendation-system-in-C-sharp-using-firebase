@@ -25,7 +25,7 @@ namespace RIOFLIX123
             FirebaseResponse response = await client.GetAsync("Counter DATA/");
             counter1 c1 = response.ResultAs<counter1>();
             Mov_id = c1.Mov_id;
-         //   MessageBox.Show(Mov_id.ToString());
+         //   MessageBox.Show("Class"+Mov_id.ToString());
             return;
 
                 }
@@ -63,7 +63,7 @@ namespace RIOFLIX123
                
                 SetResponse response = await client.SetAsync("Counter DATA/", md);
                 counter1 result = response.ResultAs<counter1>();
-                 MessageBox.Show(Mov_id.ToString());
+             //    MessageBox.Show(Mov_id.ToString());
                 
             }
             catch (Exception eeee)

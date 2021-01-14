@@ -231,18 +231,10 @@ namespace RIOFLIX123
             //  MessageBox.Show("Data updated");
 
         }
-        public async void setdata(string n, string d, string g, string c, string k,string des,string v,string i)
+        public async void setdata(int id,string n, string d, string g, string c, string k,string des,string v,string i)
         {
-            FirebaseResponse response = await client.GetAsync("Counter DATA/");
-            counter1 obj = response.ResultAs<counter1>();
-
-
-        //    counter1 obj = new counter1();
-            //obj.retrivevalues();
-            m_id = obj.Mov_id;
-           // MessageBox.Show("setdata " + m_id.ToString());
-            obj.increase();
-            obj.adddata(obj);
+            
+            m_id = id;
             name = n;
             director =  d ;
             genre = g;
@@ -254,7 +246,7 @@ namespace RIOFLIX123
             rate = 0;
             
             viewrate = 0;
-            adddata();
+            
         }
         public async void retrivevalues(string id1)
         {
@@ -262,11 +254,12 @@ namespace RIOFLIX123
             {
                 FirebaseResponse r = await client.GetAsync("Movie DATA/"+id1);
                moviedata  obj = r.ResultAs<moviedata>();
+                MessageBox.Show("Name: " + obj.Name);
                 if (obj.Name != null)
                 {
 
                     m_id = Convert.ToInt32( id1);
-                    setdata(obj.Name, obj.Director, obj.Genre, obj.Actor, obj.Keyword, obj.Description, obj.Videofile, obj.Imagefile);
+                    this.setdata(obj.M_id,obj.Name, obj.Director, obj.Genre, obj.Actor, obj.Keyword, obj.Description, obj.Videofile, obj.Imagefile);
                 }
                 
                   
