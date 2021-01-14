@@ -24,10 +24,10 @@ namespace RIOFLIX123
         private  void Form1_Load(object sender, EventArgs e)
         {
             movietemplate mt = new movietemplate();
-            mt.Hide();
-            UserControl1 uc = new UserControl1();
-            uc.Show();
-            panel1.Controls.Add(uc);
+            mt.Show();
+           // UserControl1 uc = new UserControl1();
+           // uc.Show();
+            panel1.Controls.Add(mt);
             
         }
 
@@ -95,6 +95,11 @@ namespace RIOFLIX123
         }
 
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -24,16 +24,29 @@ namespace RIOFLIX123
 
         moviedata md = new moviedata();
         public IFirebaseClient client;
+
+
+        protected IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "y4RjXMGpXFsmuG4T0pMLmWIBtcQ6V84ke4uJ3hCT",
+            BasePath = "https://rioflix-default-rtdb.firebaseio.com/"
+        };
         private  void movietemplate_Load(object sender, EventArgs e)
         {
             bunifuProgressBar1.Hide();
             bunifuThinButton21.Hide();
             bunifuThinButton22.Hide();
+            client = new FireSharp.FirebaseClient(config);
+            if (client == null)
+            {
+
+                MessageBox.Show("Not Connected");
+            }
 
 
         }
 
-       
+
 
         private void bunifuMaterialTextbox5_OnValueChanged(object sender, EventArgs e)
         {
