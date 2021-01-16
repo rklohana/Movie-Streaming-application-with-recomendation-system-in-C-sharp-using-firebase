@@ -24,5 +24,37 @@ namespace RIOFLIX123
             
 
         }
+
+        private void flyleafPlayer1_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void searchpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void listcheck_Load(object sender, EventArgs e)
+        {
+            recent r1 = new recent();
+            recentpanel.Controls.Clear();
+            recentpanel.Controls.Add(r1);
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

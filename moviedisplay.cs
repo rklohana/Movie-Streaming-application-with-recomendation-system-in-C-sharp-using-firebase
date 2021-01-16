@@ -103,27 +103,41 @@ namespace RIOFLIX123
         }
 
 
-
+        private int rate1;
         [Category("Customs props")]
         public int ratetext
         {
             get
             {
-                return ratetext;
+                return rate1;
             }
             set
             {
-                ratetext = value;
+                rate1 = value;
                 bunifuSlider1.Value = value;
             }
         }
 
 
 
+        private string id;
+        [Category("Customs props")]
+        public string ID
+        {
+            get { return id; }
+            set
+            {
+                id = value;
 
+            }
+        }
         #endregion
+        Panel p2;
+        
         public moviedisplay()
         {
+          
+        
             InitializeComponent();
         }
         moviedata obj;
@@ -138,7 +152,7 @@ namespace RIOFLIX123
             }
             try
             {
-                FirebaseResponse r = await client.GetAsync("Movie DATA/" + nametext);
+                FirebaseResponse r = await client.GetAsync("Movie DATA/" + id);
                  obj = r.ResultAs<moviedata>();
             }
             catch
@@ -150,7 +164,7 @@ namespace RIOFLIX123
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           
         }
 
         private void bunifuSlider1_ValueChanged(object sender, EventArgs e)
@@ -160,6 +174,8 @@ namespace RIOFLIX123
             int r = obj.Rate / obj.Viewrate;
             obj.Rate = r;
             obj.Viewrate = 1;
+            obj.updatedata(id);
+            
         }
 
         private void mylistbutton_Click(object sender, EventArgs e)

@@ -23,11 +23,11 @@ namespace RIOFLIX123
 
         private  void Form1_Load(object sender, EventArgs e)
         {
-            movietemplate mt = new movietemplate();
-            mt.Show();
-           // UserControl1 uc = new UserControl1();
-           // uc.Show();
-            panel1.Controls.Add(mt);
+          //  movietemplate mt = new movietemplate();
+           // mt.Show();
+            UserControl1 uc = new UserControl1();
+            uc.Show();
+            panel1.Controls.Add(uc);
             
         }
 

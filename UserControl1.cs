@@ -37,22 +37,24 @@ namespace RIOFLIX123
              lastwatched = pl.HistName.Split(',');
             similartotext.Text += ' ' + lastwatched[0] + " :";
   */
+            panel2.Hide();
             client = new FireSharp.FirebaseClient(config);
             if (client == null)
             {
 
                 MessageBox.Show("Not Connected");
             }
-            MessageBox.Show("Loading");
+         //   MessageBox.Show("Loading");
             FirebaseResponse response = await client.GetAsync("Counter DATA/");
              c1 = response.ResultAs<counter1>();
             MessageBox.Show(c1.Mov_id.ToString());
             int n = c1.Mov_id;
             for(int i = 0; i < n; i++)
             {
-                moviedata m1 = new moviedata();
-                m1.retrivevalues(i.ToString());
-                MessageBox.Show(m1.Name);
+               
+                FirebaseResponse response1 = await client.GetAsync("Movie DATA/"+i.ToString());
+                moviedata m1 = response1.ResultAs<moviedata>();
+              //  MessageBox.Show(m1.Name+" "+i.ToString() );
                 l1.InsertLast(m1);
 
             }
@@ -60,20 +62,21 @@ namespace RIOFLIX123
         
         }
         void populatepanel1()
-        {
+        {   
             MessageBox.Show("called");
-            movieplay[] m2 = new movieplay[c1.Mov_id];
+            movieplay[] m2 = new movieplay[l1.getcount()];
             SNode temp=l1.gethead();
-            int i = 0;
             
-                while (temp != null)
+            //MessageBox.Show(temp.next.next.data.Name);
+           // MessageBox.Show(l1.getcount().ToString());
+                for(int i=0;i<l1.getcount();i++)
             {
-                try
-                {
+              //  MessageBox.Show(temp.data.Name);
+                m2[i] = new movieplay();
                     m2[i].Nametext = temp.data.Name;
                     m2[i].Icon = temp.data.photoback(temp.data.Imagefile);
                     m2[i].ID = temp.data.M_id.ToString();
-                    i++;
+                    
                     temp = temp.next;
                     if (flowLayoutPanel1.Controls.Count < 0)
                     {
@@ -84,11 +87,8 @@ namespace RIOFLIX123
                         m2[i].Show();
                         flowLayoutPanel1.Controls.Add(m2[i]);
                     }
-                }
-                catch(Exception ee)
-                {
-                    var i111 = ee;
-                }
+               
+            
                 }
             
 
@@ -110,7 +110,17 @@ namespace RIOFLIX123
 
         private void bunifuImageButton1_Click_1(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Left -= 10;
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel2.Hide();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

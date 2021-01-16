@@ -223,15 +223,15 @@ namespace RIOFLIX123
             //   MessageBox.Show("Data deleted");
 
         }
-        public async void updatedata(string a, moviedata b)
+        public async void updatedata(string a)
         {
-            MessageBox.Show("CALLed");
-            FirebaseResponse r = await client.UpdateAsync("Movie DATA/" + a, b);
+           // MessageBox.Show("CALLed");
+            FirebaseResponse r = await client.UpdateAsync("Movie DATA/" + a, this);
             moviedata obj = r.ResultAs<moviedata>();
             //  MessageBox.Show("Data updated");
 
         }
-        public async void setdata(int id,string n, string d, string g, string c, string k,string des,string v,string i)
+        public void setdata(int id,string n, string d, string g, string c, string k,string des,string v,string i)
         {
             
             m_id = id;
@@ -254,7 +254,7 @@ namespace RIOFLIX123
             {
                 FirebaseResponse r = await client.GetAsync("Movie DATA/"+id1);
                moviedata  obj = r.ResultAs<moviedata>();
-                MessageBox.Show("Name: " + obj.Name);
+             //   MessageBox.Show("Name: " + obj.Name);
                 if (obj.Name != null)
                 {
 
