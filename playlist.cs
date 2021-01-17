@@ -55,13 +55,13 @@ namespace RIOFLIX123
         }
 
 
-        public async void adddatalist(playlist md,string movname)
+        public async void adddatalist(playlist md,string movname,string username)
         {
             try
             {
-                md.retrivevalues();
+                md.retrivevalues(username);
                 md.ListName += "," + movname;
-                SetResponse response = await client.SetAsync("Playlist/", md);
+                SetResponse response = await client.SetAsync("Playlist/"+username, md);
                 playlist result = response.ResultAs<playlist>();
                 // MessageBox.Show(name);
                 //   MessageBox.Show("Data inserted");
@@ -72,11 +72,11 @@ namespace RIOFLIX123
                 MessageBox.Show("Error");
             }
         }
-        public async void retrivevalues()
+        public async void retrivevalues(string username)
         {
             try
             {
-                FirebaseResponse r = await client.GetAsync("Playlist/");
+                FirebaseResponse r = await client.GetAsync("Playlist/"+username);
                 counter1 obj = r.ResultAs<counter1>();
             }
             catch
@@ -87,11 +87,11 @@ namespace RIOFLIX123
 
 
 
-        public async void adddatahist(playlist md, string movname)
+        public async void adddatahist(playlist md, string movname,string username)
         {
             try
             {
-                md.retrivevalues();
+                md.retrivevalues(username);
                 md.HistName += "," + movname;
                 SetResponse response = await client.SetAsync("Playlist/", md);
                 playlist result = response.ResultAs<playlist>();

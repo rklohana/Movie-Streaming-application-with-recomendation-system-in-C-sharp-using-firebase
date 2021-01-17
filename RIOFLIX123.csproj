@@ -253,6 +253,15 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Vlc.DotNet.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>packages\Vlc.DotNet.Core.3.1.0\lib\net45\Vlc.DotNet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Core.Interops, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>packages\Vlc.DotNet.Core.Interops.3.1.0\lib\net45\Vlc.DotNet.Core.Interops.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Forms, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>packages\Vlc.DotNet.Forms.3.1.0\lib\net45\Vlc.DotNet.Forms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
@@ -276,6 +285,12 @@
     </Compile>
     <Compile Include="loginformUSER.Designer.cs">
       <DependentUpon>loginformUSER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mediaplayer1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mediaplayer1.Designer.cs">
+      <DependentUpon>mediaplayer1.cs</DependentUpon>
     </Compile>
     <Compile Include="moviedata.cs" />
     <Compile Include="moviedisplay.cs">
@@ -333,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="loginformUSER.resx">
       <DependentUpon>loginformUSER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mediaplayer1.resx">
+      <DependentUpon>mediaplayer1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="moviedisplay.resx">
       <DependentUpon>moviedisplay.cs</DependentUpon>

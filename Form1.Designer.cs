@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.vlcControl1 = new Vlc.DotNet.Forms.VlcControl();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -50,11 +53,25 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.vlcControl1);
             this.panel1.Location = new System.Drawing.Point(163, -4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(637, 454);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // vlcControl1
+            // 
+            this.vlcControl1.BackColor = System.Drawing.Color.Black;
+            this.vlcControl1.Location = new System.Drawing.Point(49, 18);
+            this.vlcControl1.Name = "vlcControl1";
+            this.vlcControl1.Size = new System.Drawing.Size(432, 285);
+            this.vlcControl1.Spu = -1;
+            this.vlcControl1.TabIndex = 0;
+            this.vlcControl1.Text = "vlcControl1";
+            this.vlcControl1.VlcLibDirectory = ((System.IO.DirectoryInfo)(resources.GetObject("vlcControl1.VlcLibDirectory")));
+            this.vlcControl1.VlcMediaplayerOptions = null;
+            this.vlcControl1.Click += new System.EventHandler(this.vlcControl1_Click);
             // 
             // Form1
             // 
@@ -67,6 +84,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -75,6 +94,7 @@
 
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.Panel panel1;
+        private Vlc.DotNet.Forms.VlcControl vlcControl1;
     }
 }
 

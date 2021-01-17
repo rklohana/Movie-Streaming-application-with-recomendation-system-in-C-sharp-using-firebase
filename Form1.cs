@@ -25,10 +25,12 @@ namespace RIOFLIX123
         {
           //  movietemplate mt = new movietemplate();
            // mt.Show();
-            UserControl1 uc = new UserControl1();
-            uc.Show();
-            panel1.Controls.Add(uc);
-            
+          //  UserControl1 uc = new UserControl1();
+            //uc.Show();
+           // panel1.Controls.Add(uc);
+           
+            vlcControl1.Play(new Uri("https://firebasestorage.googleapis.com/v0/b/fir-fast-36fe8.appspot.com/o/data%2Fproject%2FC%3A%5CUsers%5CHp%5CDownloads%5Cy2mate.com%20-%20Jumanji%20-%20Official%C2%AE%20Trailer%20%5BHD%5D_v240P.mp4?alt=media&token=6586b10d-43af-4fa0-8758-1c288ef91b50"));
+            MessageBox.Show("playing");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -100,6 +102,11 @@ namespace RIOFLIX123
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void vlcControl1_Click(object sender, EventArgs e)
         {
 
         }

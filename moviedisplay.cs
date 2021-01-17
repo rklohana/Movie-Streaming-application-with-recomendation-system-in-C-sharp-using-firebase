@@ -44,7 +44,7 @@ namespace RIOFLIX123
             set
             {
                 descriptiontext = value;
-                description.Text = value;
+                
             }
         }
         private string genretext;
@@ -181,7 +181,7 @@ namespace RIOFLIX123
         private void mylistbutton_Click(object sender, EventArgs e)
         {
             playlist pl = new playlist();
-            pl.adddatalist(pl, nametext);
+            pl.adddatalist(pl, nametext,"");
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -192,9 +192,14 @@ namespace RIOFLIX123
         private void pictureBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             playlist pl = new playlist();
-            pl.retrivevalues();
-            pl.adddatahist(pl, nametext);
+            pl.retrivevalues("");
+            pl.adddatahist(pl, nametext,"");
             var url = obj.Videofile;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

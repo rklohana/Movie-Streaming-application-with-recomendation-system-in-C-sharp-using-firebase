@@ -16,7 +16,7 @@ namespace RIOFLIX123
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new listcheck());
+            Application.Run(new Form1());
         }
     }
 }
