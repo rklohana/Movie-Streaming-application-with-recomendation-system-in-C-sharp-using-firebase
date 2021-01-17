@@ -14,8 +14,10 @@ namespace RIOFLIX123
 {
     public partial class recent : UserControl
     {
-        public recent()
+        Panel p2;
+        public recent(Panel p1)
         {
+            p2 = p1;
             InitializeComponent();
         }
 
@@ -74,7 +76,7 @@ namespace RIOFLIX123
             for (int i = 0; i < l1.getcount(); i++)
             {
                 //  MessageBox.Show(temp.data.Name);
-                m2[i] = new movieplay();
+                m2[i] = new movieplay(p2);
                 m2[i].Nametext = temp.data.Name;
                 m2[i].Icon = temp.data.photoback(temp.data.Imagefile);
                 m2[i].ID = temp.data.M_id.ToString();

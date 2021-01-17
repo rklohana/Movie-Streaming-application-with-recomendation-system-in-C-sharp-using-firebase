@@ -53,7 +53,16 @@ namespace RIOFLIX123
         {
             return config;
         }
+        public playlist()
+        {
+            client = new FireSharp.FirebaseClient(config);
+            if (client == null)
+            {
 
+                MessageBox.Show("Not Connected");
+
+            }
+        }
 
         public async void adddatalist(playlist md,string movname,string username)
         {

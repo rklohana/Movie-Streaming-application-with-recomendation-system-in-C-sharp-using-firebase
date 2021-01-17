@@ -133,10 +133,10 @@ namespace RIOFLIX123
         }
         #endregion
         Panel p2;
-        
-        public moviedisplay()
+
+        public moviedisplay(Panel p1)
         {
-          
+            p2 = p1;          
         
             InitializeComponent();
         }
@@ -164,7 +164,7 @@ namespace RIOFLIX123
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-           
+            p2.Hide();
         }
 
         private void bunifuSlider1_ValueChanged(object sender, EventArgs e)

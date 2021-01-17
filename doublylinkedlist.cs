@@ -3,105 +3,159 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Windows.Forms;
 
 namespace RIOFLIX123
 {
-        internal class DNode
+    class node
+    {
+        public double val;
+        public int idx;
+        public node next;
+    }
+    class duallinkedlist : node
+    {
+        node head;
+        node tail;
+        public duallinkedlist()
         {
-            internal string data;
-            internal DNode prev;
-            internal DNode next;
-            public DNode(string d)
-            {
-                data = d;
-                prev = null;
-                next = null;
-            }
+            head = null;
+            tail = null;
         }
 
-        internal class DoubleLinkedList
+        public void addlist(int i, double val1)
         {
-            internal DNode head;
-            internal void InsertFront(string data)
-            {
-                DNode newNode = new DNode(data);
-                newNode.next = head;
-                newNode.prev = null;
-                if (head != null)
-                {
-                    head.prev = newNode;
-                }
-                head = newNode;
-            }
-        internal void InsertLast(string data)
-        {
-            DNode newNode = new DNode(data);
+            node temp = new node();
+            temp.idx = i;
+            temp.val = val1;
+            temp.next = null;
             if (head == null)
             {
-                newNode.prev = null;
-                head = newNode;
+                head = temp;
+                tail = temp;
                 return;
             }
-            DNode lastNode = GetLastNode(this);
-            lastNode.next = newNode;
-            newNode.prev = lastNode;
-        }
-        internal DNode GetLastNode(DoubleLinkedList doublyList)
-        {
-            DNode temp = doublyList.head;
-            while (temp.next != null)
-            {
-                temp = temp.next;
-            }
-            return temp;
+            tail.next = temp;
+            tail = temp;
+
         }
 
-        internal void InsertAfter(DNode prev_node, string data)
+
+
+        node sortedMerge(node a, node b)
         {
-            if (prev_node == null)
+            node result = null;
+            /* Base cases */
+            if (a == null)
+                return b;
+            if (b == null)
+                return a;
+
+            /* Pick either a or b, and recur */
+            if (a.val >= b.val)
             {
-                Console.WriteLine("The given prevoius node cannot be null");
-                return;
+                result = a;
+                result.next = sortedMerge(a.next, b);
             }
-            DNode newNode = new DNode(data);
-            newNode.next = prev_node.next;
-            prev_node.next = newNode;
-            newNode.prev = prev_node;
-            if (newNode.next != null)
+            else
             {
-                newNode.next.prev = newNode;
+                result = b;
+                result.next = sortedMerge(a, b.next);
             }
+            return result;
         }
 
-        internal void DeleteNodebyKey(string key)
+        node mergeSort(node h)
         {
-            DNode temp = head;
-            if (temp != null && temp.data == key)
+            // Base case : if head is null 
+            if (h == null || h.next == null)
             {
-                head = temp.next;
-                head.prev = null;
-                return;
+                return h;
             }
-            while (temp != null && temp.data != key)
+
+            // get the middle of the list 
+            node middle = getMiddle(h);
+            node nextofmiddle = middle.next;
+
+            // set the next of middle node to null 
+            middle.next = null;
+
+            // Apply mergeSort on left list 
+            node left = mergeSort(h);
+
+            // Apply mergeSort on right list 
+            node right = mergeSort(nextofmiddle);
+
+            // Merge the left and right lists 
+            node sortedlist = sortedMerge(left, right);
+            return sortedlist;
+        }
+
+        // Utility function to get the 
+        // middle of the linked list 
+        node getMiddle(node h)
+        {
+            // Base case 
+            if (h == null)
+                return h;
+            node fastptr = h.next;
+            node slowptr = h;
+
+            // Move fastptr by two and slow ptr by one 
+            // Finally slowptr will point to middle node 
+            while (fastptr != null)
             {
+                fastptr = fastptr.next;
+                if (fastptr != null)
+                {
+                    slowptr = slowptr.next;
+                    fastptr = fastptr.next;
+                }
+            }
+            return slowptr;
+        }
+        public void sortlist()
+        {
+            head = mergeSort(head);
+        }
+
+        public void traversal()
+        {
+            string l = "";
+            node temp = head;
+            while (temp != null)
+            {
+                l += temp.val.ToString() + " ";
+
                 temp = temp.next;
             }
-            if (temp == null)
+            MessageBox.Show(l);
+        }
+
+
+
+        public int[] retnum(int n)
+        {
+            node temp = head.next;
+            int[] n1 = new int[n];
+            for (int i = 0; i < n; i++)
             {
-                return;
+                if (temp == null)
+                {
+                    break;
+                }
+                else
+                {
+                    n1[i] = temp.idx;
+                    temp = temp.next;
+                }
             }
-            if (temp.next != null)
-            {
-                temp.next.prev = temp.prev;
-            }
-            if (temp.prev != null)
-            {
-                temp.prev.next = temp.next;
-            }
+
+
+
+            return n1;
         }
 
     }
-
-
-    
-    }
+}

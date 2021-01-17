@@ -47,7 +47,8 @@ namespace RIOFLIX123
 
         private void listcheck_Load(object sender, EventArgs e)
         {
-            recent r1 = new recent();
+           // moviedisppanel.Hide();
+            recent r1 = new recent(recentpanel);
             recentpanel.Controls.Clear();
             recentpanel.Controls.Add(r1);
         }
@@ -55,6 +56,21 @@ namespace RIOFLIX123
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void moviedisppanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

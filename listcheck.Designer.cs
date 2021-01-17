@@ -178,6 +178,7 @@ namespace RIOFLIX123
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton3.Textcolor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
             // bunifuFlatButton2
             // 
@@ -215,6 +216,7 @@ namespace RIOFLIX123
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // bunifuFlatButton1
             // 
@@ -300,7 +302,6 @@ namespace RIOFLIX123
             // recentpanel
             // 
             this.recentpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.recentpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.recentpanel.Location = new System.Drawing.Point(249, 0);
             this.recentpanel.Name = "recentpanel";
             this.recentpanel.Size = new System.Drawing.Size(580, 544);
