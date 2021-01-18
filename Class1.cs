@@ -110,6 +110,19 @@ namespace RIOFLIX123
         {
             return config;
         }
+
+        protected string imagefile;
+        public string Imagefile
+        {
+            get
+            {
+                return imagefile;
+            }
+            set
+            {
+                imagefile = value;
+            }
+        }
         public information()
         {
 
@@ -146,28 +159,15 @@ namespace RIOFLIX123
     class Admin : information
     {
         public static int id = 0;
-        protected string image;
-
-        public string Image
-        {
-            get
-            {
-                return image;
-            }
-            set
-            {
-                image = value;
-            }
-
-        }
+        
         public string getimage()
         {
-            return image;
+            return imagefile;
         }
         public void setdata(string n, string im, string m, string a, string e, string p)
         {
             name = n;
-            image = im;
+            imagefile = im;
             mobile = m;
             address = a;
             email = e;
@@ -223,13 +223,14 @@ namespace RIOFLIX123
                 MessageBox.Show("error Connecting");
             }
         }
-        public void add_data(string n, string m, string a, string e, string p)
+        public void add_data(string n, string m, string a, string e, string p,string i)
         {
             name = n;
             mobile = m;
             address = a;
             email = e;
             password = p;
+            imagefile = i;
 
         }
         public async void adddata(Userdata c)

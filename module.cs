@@ -763,6 +763,7 @@ namespace RIOFLIX123
             //   MessageBox.Show("Loading");
             gettingdata();
             removestop();
+            similarity();
         }
         public void removestop()
         {
@@ -867,8 +868,8 @@ namespace RIOFLIX123
             }
             dl.sortlist();
             l2.sortlist();
-            int[] indices = dl.retnum(5);
-            int[] indices2 = l2.retnum(5);
+            int[] indices = dl.retnum(10);
+            int[] indices2 = l2.retnum(10);
             for(int i = 0; i < indices.Length; i++)
             {
                 list1.Add(movies[indices[i]]);

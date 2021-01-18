@@ -282,6 +282,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminsignup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminsignup.Designer.cs">
+      <DependentUpon>adminsignup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="counter.cs" />
     <Compile Include="doublylinkedlist.cs" />
@@ -359,6 +365,9 @@
     <Compile Include="usersignup.Designer.cs">
       <DependentUpon>usersignup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="adminsignup.resx">
+      <DependentUpon>adminsignup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

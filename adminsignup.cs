@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace RIOFLIX123
 {
-    public partial class usersignup : UserControl
-    { Userdata c2 = new Userdata();
-        public usersignup()
+    public partial class adminsignup : UserControl
+    {
+        Admin c2 = new Admin();
+        public adminsignup()
         {
             InitializeComponent();
+        }
+
+        private void nametext_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void signupbutt_Click(object sender, EventArgs e)
@@ -24,14 +30,14 @@ namespace RIOFLIX123
                 if (passtext.Text == conpasstext.Text)
                 {
                     Bitmap image = new Bitmap(pictureBox1.Image);
-                    string photo=c2.photoconvert(image);
-                    c2.add_data(nametext.Text, mobiletext.Text, addresstext.Text, emailtext.Text, passtext.Text,photo);
-                    c2.adddata(c2);
+                    string photo = c2.photoconvert(image);
+                    c2.setdata(nametext.Text,photo, mobiletext.Text, addresstext.Text, emailtext.Text, passtext.Text);
+                    c2.adddata(c2,nametext.Text);
                     //   MessageBox.Show("Account  created");
 
 
 
-                   // this.Hide();
+                    //this.Hide();
                 }
                 else
                 {
@@ -47,26 +53,6 @@ namespace RIOFLIX123
             }
         }
 
-        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void conpasstext_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mobiletext_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             OpenFileDialog on = new OpenFileDialog();
@@ -76,11 +62,11 @@ namespace RIOFLIX123
             {
                 Image ir = new Bitmap(on.FileName);
                 pictureBox1.Image = ir.GetThumbnailImage(128, 130, null, new IntPtr());
-                
+
             }
         }
 
-        private void usersignup_Load(object sender, EventArgs e)
+        private void adminsignup_Load(object sender, EventArgs e)
         {
             imagelabel.Hide();
             passlabel.Hide();
