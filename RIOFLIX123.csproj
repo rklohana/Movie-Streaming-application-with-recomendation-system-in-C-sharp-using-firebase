@@ -322,6 +322,12 @@
     <Compile Include="loginformUSER.Designer.cs">
       <DependentUpon>loginformUSER.cs</DependentUpon>
     </Compile>
+    <Compile Include="maylikepanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="maylikepanel.Designer.cs">
+      <DependentUpon>maylikepanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="mediaplayer1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -349,6 +355,12 @@
       <DependentUpon>movietemplate.cs</DependentUpon>
     </Compile>
     <Compile Include="playlist.cs" />
+    <Compile Include="playlistpanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="playlistpanel.Designer.cs">
+      <DependentUpon>playlistpanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="queue.cs" />
@@ -395,6 +407,9 @@
     <EmbeddedResource Include="loginformUSER.resx">
       <DependentUpon>loginformUSER.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="maylikepanel.resx">
+      <DependentUpon>maylikepanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mediaplayer1.resx">
       <DependentUpon>mediaplayer1.cs</DependentUpon>
     </EmbeddedResource>
@@ -406,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="movietemplate.resx">
       <DependentUpon>movietemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="playlistpanel.resx">
+      <DependentUpon>playlistpanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

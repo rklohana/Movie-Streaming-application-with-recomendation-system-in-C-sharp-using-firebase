@@ -7,62 +7,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FireSharp.Config;
-using FireSharp.Interfaces;
-using FireSharp.Response;
+
 namespace RIOFLIX123
 {
-    public partial class recent : UserControl
-      {
-        SingleLinkedList l1;
-        Panel p2;
+    public partial class playlistpanel : UserControl
+    {
+        module m;
         playlist plist;
-        public recent(Panel p1,SingleLinkedList l2,playlist pl)
+        public playlistpanel(module m1, Panel p1, SingleLinkedList l2, playlist pl)
         {
             plist = pl;
             l1 = l2;
             p2 = p1;
+            m = m1;
             InitializeComponent();
         }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        SingleLinkedList l1;
+        Panel p2;
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-        public IFirebaseClient client;
-
-
-        protected IFirebaseConfig config = new FirebaseConfig
-        {
-            AuthSecret = "y4RjXMGpXFsmuG4T0pMLmWIBtcQ6V84ke4uJ3hCT",
-            BasePath = "https://rioflix-default-rtdb.firebaseio.com/"
-        };
-        counter1 c1 = new counter1();
-        
-        private  void recent_Load(object sender, EventArgs e)
-        {
-            
-           
-            populatepanel1();
-        }
         void populatepanel1()
         {
+            string[] history = plist.ListName.Split(',');
+            
             MessageBox.Show("called");
-            movieplay[] m2 = new movieplay[plist.HistName.Length];
+            movieplay[] m2 = new movieplay[history.Length];
+
+
+
 
             SNode temp;
             //MessageBox.Show(temp.next.next.data.Name);
             // MessageBox.Show(l1.getcount().ToString());
             int i = 0;
-            var history = plist.HistName.Split(',');
             foreach (var pls in history)
             {
-                 temp = l1.gethead();
+                temp = l1.gethead();
                 for (int j = 0; j < l1.getcount(); j++)
                 {
                     if (pls == temp.data.Name)
@@ -73,7 +55,7 @@ namespace RIOFLIX123
                         m2[i].Icon = temp.data.photoback(temp.data.Imagefile);
                         m2[i].ID = temp.data.M_id.ToString();
 
-                        
+
                         if (flowLayoutPanel1.Controls.Count < 0)
                         {
                             flowLayoutPanel1.Controls.Clear();
@@ -83,14 +65,12 @@ namespace RIOFLIX123
                             m2[i].Show();
                             flowLayoutPanel1.Controls.Add(m2[i]);
                         }
+
                     }
                     temp = temp.next;
-
-
                 }
                 i++;
             }
-
         }
     }
 }

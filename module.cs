@@ -12,7 +12,7 @@ using Accord.Math;
 using F23.StringSimilarity;
 namespace RIOFLIX123
 {
-    class module
+    public class module
     {
         duallinkedlist dl = new duallinkedlist();
         public string[] stopWordsList = new string[]
