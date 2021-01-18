@@ -282,11 +282,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminside.Designer.cs">
+      <DependentUpon>adminside.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminsignup.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="adminsignup.Designer.cs">
       <DependentUpon>adminsignup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ALLmovies.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ALLmovies.Designer.cs">
+      <DependentUpon>ALLmovies.cs</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="counter.cs" />
@@ -365,8 +377,14 @@
     <Compile Include="usersignup.Designer.cs">
       <DependentUpon>usersignup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="adminside.resx">
+      <DependentUpon>adminside.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminsignup.resx">
       <DependentUpon>adminsignup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ALLmovies.resx">
+      <DependentUpon>ALLmovies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -10,7 +10,7 @@ using System.IO;
 using System.Windows.Forms;
 namespace RIOFLIX123
 {
-    class playlist
+   public class playlist
     {
         private static string listname;
         public string ListName
@@ -39,7 +39,11 @@ namespace RIOFLIX123
             }
         }
 
-
+        public void setdata(string p,string h)
+        {
+            histname = h;
+            listname = p;
+        }
         public IFirebaseClient client;
 
 
@@ -68,7 +72,7 @@ namespace RIOFLIX123
         {
             try
             {
-                md.retrivevalues(username);
+                
                 md.ListName += "," + movname;
                 SetResponse response = await client.SetAsync("Playlist/"+username, md);
                 playlist result = response.ResultAs<playlist>();
@@ -86,7 +90,8 @@ namespace RIOFLIX123
             try
             {
                 FirebaseResponse r = await client.GetAsync("Playlist/"+username);
-                counter1 obj = r.ResultAs<counter1>();
+                playlist obj = r.ResultAs<playlist>();
+                this.setdata(obj.ListName, obj.HistName);
             }
             catch
             {
@@ -100,9 +105,9 @@ namespace RIOFLIX123
         {
             try
             {
-                md.retrivevalues(username);
+                
                 md.HistName += "," + movname;
-                SetResponse response = await client.SetAsync("Playlist/", md);
+                SetResponse response = await client.SetAsync("Playlist/"+username, md);
                 playlist result = response.ResultAs<playlist>();
                 // MessageBox.Show(name);
                 //   MessageBox.Show("Data inserted");

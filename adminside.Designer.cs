@@ -1,7 +1,6 @@
-﻿
-namespace RIOFLIX123
+﻿namespace RIOFLIX123
 {
-    partial class listcheck
+    partial class adminside
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +29,11 @@ namespace RIOFLIX123
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listcheck));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminside));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -44,6 +42,7 @@ namespace RIOFLIX123
             this.panel7 = new System.Windows.Forms.Panel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.recentpanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -57,12 +56,10 @@ namespace RIOFLIX123
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(67, 582);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.TabIndex = 4;
             // 
             // panel3
             // 
@@ -87,15 +84,6 @@ namespace RIOFLIX123
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(67, 544);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(762, 38);
-            this.panel4.TabIndex = 1;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
@@ -104,7 +92,6 @@ namespace RIOFLIX123
             this.panel5.Controls.Add(this.bunifuFlatButton2);
             this.panel5.Controls.Add(this.bunifuFlatButton1);
             this.panel5.Controls.Add(this.panel7);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(67, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(182, 544);
@@ -179,7 +166,6 @@ namespace RIOFLIX123
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton3.Textcolor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
             // bunifuFlatButton2
             // 
@@ -217,7 +203,6 @@ namespace RIOFLIX123
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // bunifuFlatButton1
             // 
@@ -281,7 +266,6 @@ namespace RIOFLIX123
             this.bunifuImageButton1.TabIndex = 1;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 8;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -293,6 +277,16 @@ namespace RIOFLIX123
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(77, 23);
             this.bunifuCustomLabel1.TabIndex = 0;
             this.bunifuCustomLabel1.Text = "RIOFLIX";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 544);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(829, 38);
+            this.panel4.TabIndex = 5;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // bunifuDragControl1
             // 
@@ -307,22 +301,21 @@ namespace RIOFLIX123
             this.recentpanel.Location = new System.Drawing.Point(249, 0);
             this.recentpanel.Name = "recentpanel";
             this.recentpanel.Size = new System.Drawing.Size(580, 544);
-            this.recentpanel.TabIndex = 3;
-            this.recentpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.recentpanel_Paint);
+            this.recentpanel.TabIndex = 7;
             // 
-            // listcheck
+            // adminside
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(829, 582);
-            this.Controls.Add(this.recentpanel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.recentpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "listcheck";
-            this.Text = "listcheck";
-            this.Load += new System.EventHandler(this.listcheck_Load);
+            this.Name = "adminside";
+            this.Text = "adminside";
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -338,16 +331,16 @@ namespace RIOFLIX123
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private System.Windows.Forms.Panel panel7;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private System.Windows.Forms.Panel panel7;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel recentpanel;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

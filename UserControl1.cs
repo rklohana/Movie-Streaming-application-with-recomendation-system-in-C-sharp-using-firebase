@@ -27,6 +27,7 @@ namespace RIOFLIX123
         Panel p2;
         public UserControl1()
         {
+            p2 = new Panel();
             InitializeComponent();
         }
         counter1 c1 = new counter1();
@@ -111,7 +112,7 @@ namespace RIOFLIX123
 
         private void bunifuImageButton1_Click_1(object sender, EventArgs e)
         {
-            
+            p2.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -37,6 +37,9 @@ namespace RIOFLIX123
             this.passwordtext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.signin = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.invalidlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -57,16 +60,15 @@ namespace RIOFLIX123
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(79, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 18);
+            this.label2.Size = new System.Drawing.Size(0, 18);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Phone Number";
             // 
             // mobiletext
             // 
             this.mobiletext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.mobiletext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.mobiletext.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mobiletext.ForeColor = System.Drawing.Color.White;
+            this.mobiletext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mobiletext.HintForeColor = System.Drawing.Color.Empty;
             this.mobiletext.HintText = "";
             this.mobiletext.isPassword = false;
@@ -97,7 +99,7 @@ namespace RIOFLIX123
             this.passwordtext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.passwordtext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.passwordtext.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordtext.ForeColor = System.Drawing.Color.White;
+            this.passwordtext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.passwordtext.HintForeColor = System.Drawing.Color.Empty;
             this.passwordtext.HintText = "";
             this.passwordtext.isPassword = false;
@@ -151,11 +153,56 @@ namespace RIOFLIX123
             this.bunifuCustomLabel1.Text = "New to RIOFLIX? Sign up.";
             this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
+            // bunifuDropdown1
+            // 
+            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown1.BorderRadius = 3;
+            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDropdown1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuDropdown1.Items = new string[] {
+        "ADMIN",
+        "USER"};
+            this.bunifuDropdown1.Location = new System.Drawing.Point(236, 70);
+            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDropdown1.Name = "bunifuDropdown1";
+            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
+            this.bunifuDropdown1.selectedIndex = -1;
+            this.bunifuDropdown1.Size = new System.Drawing.Size(138, 33);
+            this.bunifuDropdown1.TabIndex = 7;
+            this.bunifuDropdown1.onItemSelected += new System.EventHandler(this.bunifuDropdown1_onItemSelected);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(236, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 18);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "*Please Senpai :(";
+            // 
+            // invalidlabel
+            // 
+            this.invalidlabel.AutoSize = true;
+            this.invalidlabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.invalidlabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.invalidlabel.Location = new System.Drawing.Point(162, 173);
+            this.invalidlabel.Name = "invalidlabel";
+            this.invalidlabel.Size = new System.Drawing.Size(137, 18);
+            this.invalidlabel.TabIndex = 9;
+            this.invalidlabel.Text = "*invalid password";
+            // 
             // userlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.Controls.Add(this.invalidlabel);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.bunifuDropdown1);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.signin);
             this.Controls.Add(this.passwordtext);
@@ -180,5 +227,8 @@ namespace RIOFLIX123
         private Bunifu.Framework.UI.BunifuMaterialTextbox passwordtext;
         private Bunifu.Framework.UI.BunifuThinButton2 signin;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label invalidlabel;
     }
 }

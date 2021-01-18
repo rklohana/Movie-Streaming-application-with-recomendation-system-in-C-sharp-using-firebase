@@ -63,7 +63,7 @@
             // vlcControl1
             // 
             this.vlcControl1.BackColor = System.Drawing.Color.Black;
-            this.vlcControl1.Location = new System.Drawing.Point(49, 18);
+            this.vlcControl1.Location = new System.Drawing.Point(57, 16);
             this.vlcControl1.Name = "vlcControl1";
             this.vlcControl1.Size = new System.Drawing.Size(432, 285);
             this.vlcControl1.Spu = -1;

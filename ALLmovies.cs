@@ -7,46 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FireSharp.Config;
-using FireSharp.Interfaces;
-using FireSharp.Response;
+
 namespace RIOFLIX123
 {
-    public partial class recent : UserControl
-      {
-        SingleLinkedList l1;
+    public partial class ALLmovies : UserControl
+    {
         Panel p2;
-        public recent(Panel p1,SingleLinkedList l2)
+        SingleLinkedList l1;
+        public ALLmovies(SingleLinkedList l2, Panel p1)
         {
             l1 = l2;
             p2 = p1;
             InitializeComponent();
         }
 
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-        public IFirebaseClient client;
-
-
-        protected IFirebaseConfig config = new FirebaseConfig
-        {
-            AuthSecret = "y4RjXMGpXFsmuG4T0pMLmWIBtcQ6V84ke4uJ3hCT",
-            BasePath = "https://rioflix-default-rtdb.firebaseio.com/"
-        };
-        counter1 c1 = new counter1();
-        
-        private  void recent_Load(object sender, EventArgs e)
-        {
-            
-           
-            populatepanel1();
         }
         void populatepanel1()
         {
@@ -77,8 +54,11 @@ namespace RIOFLIX123
 
 
             }
+        }
 
-
+        private void ALLmovies_Load(object sender, EventArgs e)
+        {
+            populatepanel1();
         }
     }
 }

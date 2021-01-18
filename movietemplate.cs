@@ -33,7 +33,7 @@ namespace RIOFLIX123
         };
         private  void movietemplate_Load(object sender, EventArgs e)
         {
-            bunifuProgressBar1.Hide();
+            bunifuCircleProgressbar1.Hide();
             bunifuThinButton21.Hide();
             bunifuThinButton22.Hide();
             client = new FireSharp.FirebaseClient(config);
@@ -89,15 +89,15 @@ namespace RIOFLIX123
                             .Child(im.FileName)
                             .PutAsync(stream);
 
-                    trans1.ShowSync(bunifuProgressBar1);
-                    task.Progress.ProgressChanged += (s, rk) => bunifuProgressBar1.Value = rk.Percentage;
+                    trans1.ShowSync(bunifuCircleProgressbar1);
+                    task.Progress.ProgressChanged += (s, rk) => bunifuCircleProgressbar1.Value = rk.Percentage;
 
 
 
 
                     var downloadUrl = await task;
                     url = downloadUrl;
-                    bunifuProgressBar1.Hide();
+                    bunifuCircleProgressbar1.Hide();
                     trans1.ShowSync(bunifuThinButton22);
                    // bunifuThinButton22.Show();
                 }
@@ -132,6 +132,66 @@ namespace RIOFLIX123
             md.adddata();
 
             
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nametext_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void startext_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void creatortext_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void descriptext_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void keywordtext_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

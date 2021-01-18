@@ -15,7 +15,7 @@ using System.Drawing.Imaging;
 
 namespace RIOFLIX123
 {
-    class information
+   public class information
     {
         public string photoconvert(Bitmap i)
         {
@@ -35,6 +35,7 @@ namespace RIOFLIX123
             m.Dispose();
             return bm;
         }
+        
         protected string name;
         public string Name
         {
@@ -100,7 +101,7 @@ namespace RIOFLIX123
 
         public IFirebaseClient client;
 
-
+        
         protected IFirebaseConfig config = new FirebaseConfig
         {
             AuthSecret = "y4RjXMGpXFsmuG4T0pMLmWIBtcQ6V84ke4uJ3hCT",
@@ -156,7 +157,7 @@ namespace RIOFLIX123
 
 
     }
-    class Admin : information
+   public class Admin : information
     {
         public static int id = 0;
         
@@ -184,6 +185,12 @@ namespace RIOFLIX123
                 MessageBox.Show("not Connected");
             }
         }
+
+        public bool isadmin()
+        {
+            return true;
+        }
+
         public async void adddata(Admin a, string b)
         {
             SetResponse response = await client.SetAsync("Admin DATA/" + b, a);
@@ -211,7 +218,7 @@ namespace RIOFLIX123
         }
     }
 
-    class Userdata : information
+   public class Userdata : information
     {
         public Userdata()
         {
@@ -222,6 +229,10 @@ namespace RIOFLIX123
 
                 MessageBox.Show("error Connecting");
             }
+        }
+        public bool isadmin()
+        {
+            return false;
         }
         public void add_data(string n, string m, string a, string e, string p,string i)
         {

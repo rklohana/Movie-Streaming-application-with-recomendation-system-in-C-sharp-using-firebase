@@ -5,8 +5,12 @@ namespace RIOFLIX123
 {
     public partial class listcheck : Form
     {
-        public listcheck()
+        public SingleLinkedList l1;
+        public playlist p2;
+        public listcheck(SingleLinkedList l2,playlist pl,Admin ad,Userdata ud)
         {
+            l1 = l2;
+            p2 = pl;
             InitializeComponent();
         }
 
@@ -48,7 +52,7 @@ namespace RIOFLIX123
         private void listcheck_Load(object sender, EventArgs e)
         {
            // moviedisppanel.Hide();
-            recent r1 = new recent(recentpanel);
+            recent r1 = new recent(recentpanel,l1);
             recentpanel.Controls.Clear();
             recentpanel.Controls.Add(r1);
         }
@@ -71,6 +75,21 @@ namespace RIOFLIX123
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void recentpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
