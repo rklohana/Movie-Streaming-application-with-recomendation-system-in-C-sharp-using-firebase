@@ -21,7 +21,7 @@ namespace RIOFLIX123
 
         private void signupform_Load(object sender, EventArgs e)
         {
-            usersignup us = new usersignup(lf);
+            usersignup us = new usersignup(lf,this);
             panel1.Controls.Clear();
             panel1.Controls.Add(us);
         }

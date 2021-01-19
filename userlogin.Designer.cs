@@ -40,6 +40,8 @@ namespace RIOFLIX123
             this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.label4 = new System.Windows.Forms.Label();
             this.invalidlabel = new System.Windows.Forms.Label();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -181,9 +183,9 @@ namespace RIOFLIX123
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(236, 38);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 18);
+            this.label4.Size = new System.Drawing.Size(100, 18);
             this.label4.TabIndex = 8;
-            this.label4.Text = "*Select";
+            this.label4.Text = "*Pls Senpai :(";
             // 
             // invalidlabel
             // 
@@ -192,15 +194,31 @@ namespace RIOFLIX123
             this.invalidlabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.invalidlabel.Location = new System.Drawing.Point(162, 173);
             this.invalidlabel.Name = "invalidlabel";
-            this.invalidlabel.Size = new System.Drawing.Size(137, 18);
+            this.invalidlabel.Size = new System.Drawing.Size(101, 18);
             this.invalidlabel.TabIndex = 9;
-            this.invalidlabel.Text = "*invalid password";
+            this.invalidlabel.Text = "*Senpai pls :(";
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(440, 3);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(23, 24);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bunifuImageButton1.TabIndex = 14;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 0;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // userlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.invalidlabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bunifuDropdown1);
@@ -214,6 +232,7 @@ namespace RIOFLIX123
             this.Name = "userlogin";
             this.Size = new System.Drawing.Size(475, 350);
             this.Load += new System.EventHandler(this.userlogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +250,6 @@ namespace RIOFLIX123
         private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label invalidlabel;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }

@@ -71,5 +71,10 @@ namespace RIOFLIX123
             imagelabel.Hide();
             passlabel.Hide();
         }
+
+        private void passlabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -43,7 +43,7 @@ namespace RIOFLIX123
                         retrievedata();
                         listcheck lc = new listcheck(l1, pl, ud, m1);
                         lc.Show();
-                        this.Hide();
+                        lf1.Hide();
 
                     }
                     else
@@ -70,7 +70,7 @@ namespace RIOFLIX123
                         retrievedata();
                         adminside lc = new adminside(l1, pl, ad, m1);
                         lc.Show();
-                        this.Hide();
+                        lf1.Hide();
                     }
                     else
                     {
@@ -142,6 +142,11 @@ namespace RIOFLIX123
         private void mobiletext_OnValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            lf1.Close();
         }
     }
 }

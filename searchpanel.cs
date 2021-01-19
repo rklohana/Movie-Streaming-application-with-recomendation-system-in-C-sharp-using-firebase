@@ -70,7 +70,7 @@ namespace RIOFLIX123
             try
             {
 
-                MessageBox.Show("called");
+              //  MessageBox.Show("called");
                 movieplay[] m2 = new movieplay[list1.Count];
 
                 SNode temp;

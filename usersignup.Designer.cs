@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usersignup));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.passlabel = new System.Windows.Forms.Label();
+            this.imagelabel = new System.Windows.Forms.Label();
+            this.addresstext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -43,14 +48,11 @@
             this.emailtext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.mobiletext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.nametext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.addresstext = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.imagelabel = new System.Windows.Forms.Label();
-            this.passlabel = new System.Windows.Forms.Label();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -58,6 +60,7 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuImageButton1);
             this.bunifuGradientPanel1.Controls.Add(this.passlabel);
             this.bunifuGradientPanel1.Controls.Add(this.imagelabel);
             this.bunifuGradientPanel1.Controls.Add(this.addresstext);
@@ -86,6 +89,82 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(620, 456);
             this.bunifuGradientPanel1.TabIndex = 0;
             this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
+            // 
+            // passlabel
+            // 
+            this.passlabel.AutoSize = true;
+            this.passlabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passlabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.passlabel.Location = new System.Drawing.Point(173, 321);
+            this.passlabel.Name = "passlabel";
+            this.passlabel.Size = new System.Drawing.Size(145, 16);
+            this.passlabel.TabIndex = 17;
+            this.passlabel.Text = "*Password donot match";
+            // 
+            // imagelabel
+            // 
+            this.imagelabel.AutoSize = true;
+            this.imagelabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imagelabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.imagelabel.Location = new System.Drawing.Point(463, 220);
+            this.imagelabel.Name = "imagelabel";
+            this.imagelabel.Size = new System.Drawing.Size(133, 16);
+            this.imagelabel.TabIndex = 16;
+            this.imagelabel.Text = "*image not uploaded";
+            // 
+            // addresstext
+            // 
+            this.addresstext.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.addresstext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.addresstext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.addresstext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.addresstext.HintText = "";
+            this.addresstext.isPassword = false;
+            this.addresstext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.addresstext.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
+            this.addresstext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.addresstext.LineThickness = 3;
+            this.addresstext.Location = new System.Drawing.Point(176, 127);
+            this.addresstext.Margin = new System.Windows.Forms.Padding(4);
+            this.addresstext.Name = "addresstext";
+            this.addresstext.Size = new System.Drawing.Size(244, 42);
+            this.addresstext.TabIndex = 15;
+            this.addresstext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.addresstext.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Add Image";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 15;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(466, 172);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(123, 43);
+            this.bunifuThinButton21.TabIndex = 14;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(466, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(123, 129);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // bunifuCustomLabel5
             // 
@@ -283,86 +362,25 @@
             this.nametext.TabIndex = 0;
             this.nametext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(466, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 129);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Add Image";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 15;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(466, 172);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(123, 43);
-            this.bunifuThinButton21.TabIndex = 14;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
-            // 
-            // addresstext
-            // 
-            this.addresstext.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.addresstext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.addresstext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addresstext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.addresstext.HintText = "";
-            this.addresstext.isPassword = false;
-            this.addresstext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.addresstext.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
-            this.addresstext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.addresstext.LineThickness = 3;
-            this.addresstext.Location = new System.Drawing.Point(176, 127);
-            this.addresstext.Margin = new System.Windows.Forms.Padding(4);
-            this.addresstext.Name = "addresstext";
-            this.addresstext.Size = new System.Drawing.Size(244, 42);
-            this.addresstext.TabIndex = 15;
-            this.addresstext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.addresstext.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
-            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 40;
             this.bunifuElipse1.TargetControl = this.pictureBox1;
             // 
-            // imagelabel
+            // bunifuImageButton1
             // 
-            this.imagelabel.AutoSize = true;
-            this.imagelabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.imagelabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.imagelabel.Location = new System.Drawing.Point(463, 220);
-            this.imagelabel.Name = "imagelabel";
-            this.imagelabel.Size = new System.Drawing.Size(133, 16);
-            this.imagelabel.TabIndex = 16;
-            this.imagelabel.Text = "*image not uploaded";
-            // 
-            // passlabel
-            // 
-            this.passlabel.AutoSize = true;
-            this.passlabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passlabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.passlabel.Location = new System.Drawing.Point(173, 321);
-            this.passlabel.Name = "passlabel";
-            this.passlabel.Size = new System.Drawing.Size(145, 16);
-            this.passlabel.TabIndex = 17;
-            this.passlabel.Text = "*Password donot match";
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(12, 14);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(23, 24);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bunifuImageButton1.TabIndex = 18;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 0;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // usersignup
             // 
@@ -375,6 +393,7 @@
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,5 +419,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Label imagelabel;
         private System.Windows.Forms.Label passlabel;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }

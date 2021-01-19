@@ -58,20 +58,21 @@
             this.passlabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.passlabel.Location = new System.Drawing.Point(181, 323);
             this.passlabel.Name = "passlabel";
-            this.passlabel.Size = new System.Drawing.Size(145, 16);
+            this.passlabel.Size = new System.Drawing.Size(28, 16);
             this.passlabel.TabIndex = 34;
-            this.passlabel.Text = "*Password donot match";
+            this.passlabel.Text = "*Pls";
+            this.passlabel.Click += new System.EventHandler(this.passlabel_Click);
             // 
             // imagelabel
             // 
             this.imagelabel.AutoSize = true;
             this.imagelabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.imagelabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.imagelabel.Location = new System.Drawing.Point(471, 222);
+            this.imagelabel.Location = new System.Drawing.Point(449, 222);
             this.imagelabel.Name = "imagelabel";
-            this.imagelabel.Size = new System.Drawing.Size(133, 16);
+            this.imagelabel.Size = new System.Drawing.Size(71, 16);
             this.imagelabel.TabIndex = 33;
-            this.imagelabel.Text = "*image not uploaded";
+            this.imagelabel.Text = "*pls senpai";
             // 
             // addresstext
             // 
@@ -110,7 +111,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.bunifuThinButton21.IdleForecolor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(474, 174);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(452, 174);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(123, 43);
@@ -120,7 +121,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(474, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(454, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(123, 129);
             this.pictureBox1.TabIndex = 30;
@@ -349,7 +350,7 @@
             this.Controls.Add(this.mobiletext);
             this.Controls.Add(this.nametext);
             this.Name = "adminsignup";
-            this.Size = new System.Drawing.Size(620, 456);
+            this.Size = new System.Drawing.Size(580, 508);
             this.Load += new System.EventHandler(this.adminsignup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

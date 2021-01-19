@@ -31,7 +31,7 @@ namespace RIOFLIX123
         }
         void populatepanel1()
         {
-            MessageBox.Show("called");
+         //   MessageBox.Show("called");
             movieplay[] m2 = new movieplay[l1.getcount()];
             SNode temp = l1.gethead();
             //aggaya hoga

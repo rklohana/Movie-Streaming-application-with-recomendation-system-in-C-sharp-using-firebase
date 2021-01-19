@@ -299,4 +299,12 @@
   <metadata name="bunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>141, 17</value>
   </metadata>
+  <data name="bunifuImageButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAJZJREFUSEvt
+        lksKgDAMRHsSvYrX9gMeoJ/z2JUmMgWtktSdizwYZEqcqSvj3kgp9d77JYSQSXuDcoxxpmeHCBmEvwVp
+        mhAhQ4PnzWHZrwiotWKEZ9hnWJkSAMtfNJSzq/gcI493RD4NAytQsQIVK1CxAhUrUPldwe2X2QIKNlgZ
+        bAjnjT6q7afPawsPk5rXFtJIqtYW5w5u4AHfEZTqTgAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

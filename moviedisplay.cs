@@ -226,7 +226,7 @@ namespace RIOFLIX123
             {
                
                 var like = m2.getreccomend(nametext);
-                MessageBox.Show("called");
+              //  MessageBox.Show("called");
                 movieplay[] ml = new movieplay[like.Count];
 
 

@@ -113,5 +113,25 @@ namespace RIOFLIX123
             recentpanel.Controls.Clear();
             recentpanel.Controls.Add(sp);
         }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            loginformUSER lf = new loginformUSER();
+            lf.Show();
+            this.Close();
+            
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            adminsignup asp = new adminsignup();
+            recentpanel.Controls.Clear();
+            recentpanel.Controls.Add(asp);
+        }
     }
 }

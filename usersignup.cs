@@ -13,8 +13,10 @@ namespace RIOFLIX123
     public partial class usersignup : UserControl
     { Userdata c2 = new Userdata();
         loginformUSER lf1;
-        public usersignup(loginformUSER lf)
+        signupform sf;
+        public usersignup(loginformUSER lf,signupform ss)
         {
+            sf = ss;
             lf1 = lf;
             InitializeComponent();
         }
@@ -33,7 +35,7 @@ namespace RIOFLIX123
                     
                     lf1.Show();
                     this.Hide();
-
+                    sf.Close();
 
                    // this.Hide();
                 }
@@ -88,6 +90,11 @@ namespace RIOFLIX123
         {
             imagelabel.Hide();
             passlabel.Hide();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            sf.Close();
         }
     }
 }

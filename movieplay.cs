@@ -107,7 +107,7 @@ namespace RIOFLIX123
                 m2.Icon = icon;
                 m2.ID = id;
                 m2.ratetext = obj.Rate;
-                MessageBox.Show(m2.Nametext);
+              //  MessageBox.Show(m2.Nametext);
                 p2.Controls.Clear();
                 
                 bunifuTransition1.ShowSync(m2);

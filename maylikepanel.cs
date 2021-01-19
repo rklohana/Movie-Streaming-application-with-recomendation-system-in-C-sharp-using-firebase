@@ -38,7 +38,7 @@ namespace RIOFLIX123
             {
                 string[] history = plist.HistName.Split(',');
                 var like = m.getreccomend(history[history.Length - 1]);
-                MessageBox.Show("called");
+              //  MessageBox.Show("called");
                 movieplay[] m2 = new movieplay[like.Count];
 
 

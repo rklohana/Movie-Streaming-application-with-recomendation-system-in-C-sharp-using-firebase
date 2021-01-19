@@ -36,7 +36,7 @@ namespace RIOFLIX123
             {
                 string[] history = plist.ListName.Split(',');
 
-                MessageBox.Show("called");
+            //    MessageBox.Show("called");
                 movieplay[] m2 = new movieplay[history.Length];
 
                 Queue qu = new Queue();

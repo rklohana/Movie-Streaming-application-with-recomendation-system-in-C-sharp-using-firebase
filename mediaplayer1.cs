@@ -29,7 +29,7 @@ namespace RIOFLIX123
 
         private void mediaplayer1_Load(object sender, EventArgs e)
         {
-            bunifuProgressBar1.Hide();
+           // bunifuProgressBar1.Hide();
             pictureBox1.Image = im;
             label1.Text = name;
             vlcControl1.Play(new Uri(url));
@@ -70,13 +70,18 @@ namespace RIOFLIX123
 
         private void vlcControl1_MouseEnter(object sender, EventArgs e)
         {
-            bunifuProgressBar1.Show();
-            bunifuProgressBar1.Value = Convert.ToInt32(vlcControl1.Time);
+            //bunifuProgressBar1.Show();
+            //bunifuProgressBar1.Value = Convert.ToInt32(vlcControl1.Time);
         }
 
         private void vlcControl1_MouseLeave(object sender, EventArgs e)
         {
-            bunifuProgressBar1.Hide();
+          //  bunifuProgressBar1.Hide();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

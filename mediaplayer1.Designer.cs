@@ -36,7 +36,6 @@
             this.bunifuSlider1 = new Bunifu.Framework.UI.BunifuSlider();
             this.pausebutton = new Bunifu.Framework.UI.BunifuImageButton();
             this.playbutton = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +62,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel4.Controls.Add(this.bunifuProgressBar1);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.bunifuSlider1);
@@ -74,6 +72,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(580, 41);
             this.panel4.TabIndex = 2;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // label1
             // 
@@ -137,18 +136,6 @@
             this.playbutton.Zoom = 5;
             this.playbutton.Click += new System.EventHandler(this.playbutton_Click);
             // 
-            // bunifuProgressBar1
-            // 
-            this.bunifuProgressBar1.BackColor = System.Drawing.Color.Silver;
-            this.bunifuProgressBar1.BorderRadius = 5;
-            this.bunifuProgressBar1.Location = new System.Drawing.Point(170, 10);
-            this.bunifuProgressBar1.MaximumValue = 100;
-            this.bunifuProgressBar1.Name = "bunifuProgressBar1";
-            this.bunifuProgressBar1.ProgressColor = System.Drawing.Color.Teal;
-            this.bunifuProgressBar1.Size = new System.Drawing.Size(152, 10);
-            this.bunifuProgressBar1.TabIndex = 5;
-            this.bunifuProgressBar1.Value = 0;
-            // 
             // mediaplayer1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +165,5 @@
         private Bunifu.Framework.UI.BunifuSlider bunifuSlider1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuProgressBar bunifuProgressBar1;
     }
 }
