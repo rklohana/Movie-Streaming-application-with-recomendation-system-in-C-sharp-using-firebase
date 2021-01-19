@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminside));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
@@ -45,7 +46,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.recentpanel = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -64,11 +68,21 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 544);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(67, 38);
             this.panel3.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(22, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -87,6 +101,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.panel5.Controls.Add(this.bunifuFlatButton5);
             this.panel5.Controls.Add(this.bunifuFlatButton4);
             this.panel5.Controls.Add(this.bunifuFlatButton3);
             this.panel5.Controls.Add(this.bunifuFlatButton2);
@@ -131,6 +146,7 @@
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton4.Textcolor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
             // bunifuFlatButton3
             // 
@@ -166,6 +182,7 @@
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton3.Textcolor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
             // bunifuFlatButton2
             // 
@@ -203,6 +220,7 @@
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // bunifuFlatButton1
             // 
@@ -302,6 +320,43 @@
             this.recentpanel.Name = "recentpanel";
             this.recentpanel.Size = new System.Drawing.Size(580, 544);
             this.recentpanel.TabIndex = 7;
+            this.recentpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.recentpanel_Paint);
+            // 
+            // bunifuFlatButton5
+            // 
+            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
+            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton5.BorderRadius = 0;
+            this.bunifuFlatButton5.ButtonText = "Add Movie";
+            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton5.Iconimage = null;
+            this.bunifuFlatButton5.Iconimage_right = null;
+            this.bunifuFlatButton5.Iconimage_right_Selected = null;
+            this.bunifuFlatButton5.Iconimage_Selected = null;
+            this.bunifuFlatButton5.IconMarginLeft = 0;
+            this.bunifuFlatButton5.IconMarginRight = 0;
+            this.bunifuFlatButton5.IconRightVisible = true;
+            this.bunifuFlatButton5.IconRightZoom = 0D;
+            this.bunifuFlatButton5.IconVisible = true;
+            this.bunifuFlatButton5.IconZoom = 90D;
+            this.bunifuFlatButton5.IsTab = true;
+            this.bunifuFlatButton5.Location = new System.Drawing.Point(0, 322);
+            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
+            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton5.selected = false;
+            this.bunifuFlatButton5.Size = new System.Drawing.Size(182, 56);
+            this.bunifuFlatButton5.TabIndex = 7;
+            this.bunifuFlatButton5.Text = "Add Movie";
+            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton5.Textcolor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton5.Click += new System.EventHandler(this.bunifuFlatButton5_Click);
             // 
             // adminside
             // 
@@ -316,7 +371,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "adminside";
             this.Text = "adminside";
+            this.Load += new System.EventHandler(this.adminside_Load);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -342,5 +400,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel recentpanel;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
     }
 }

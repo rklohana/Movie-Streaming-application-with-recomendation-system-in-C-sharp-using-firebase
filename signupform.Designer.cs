@@ -1,7 +1,6 @@
-﻿
-namespace RIOFLIX123
+﻿namespace RIOFLIX123
 {
-    partial class loginformUSER
+    partial class signupform
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +33,22 @@ namespace RIOFLIX123
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Location = new System.Drawing.Point(0, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 350);
+            this.panel1.Size = new System.Drawing.Size(620, 456);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // loginformUSER
+            // signupform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 350);
+            this.ClientSize = new System.Drawing.Size(620, 456);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "loginformUSER";
-            this.Text = "loginformUSER";
-            this.Load += new System.EventHandler(this.loginformUSER_Load);
+            this.Name = "signupform";
+            this.Text = "signupform";
+            this.Load += new System.EventHandler(this.signupform_Load);
             this.ResumeLayout(false);
 
         }

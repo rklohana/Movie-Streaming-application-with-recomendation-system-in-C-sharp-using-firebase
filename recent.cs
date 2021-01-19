@@ -17,8 +17,12 @@ namespace RIOFLIX123
         SingleLinkedList l1;
         Panel p2;
         playlist plist;
-        public recent(Panel p1,SingleLinkedList l2,playlist pl)
+        string username;
+        module m;
+        public recent(module m1,Panel p1,SingleLinkedList l2,playlist pl,string n)
         {
+            m = m1;
+            username = n;
             plist = pl;
             l1 = l2;
             p2 = p1;
@@ -52,45 +56,66 @@ namespace RIOFLIX123
         }
         void populatepanel1()
         {
-            MessageBox.Show("called");
-            movieplay[] m2 = new movieplay[plist.HistName.Length];
-
-            SNode temp;
-            //MessageBox.Show(temp.next.next.data.Name);
-            // MessageBox.Show(l1.getcount().ToString());
-            int i = 0;
-            var history = plist.HistName.Split(',');
-            foreach (var pls in history)
+            try
             {
-                 temp = l1.gethead();
-                for (int j = 0; j < l1.getcount(); j++)
+                MessageBox.Show("called");
+                movieplay[] m2 = new movieplay[plist.HistName.Length];
+
+                SNode temp;
+                //MessageBox.Show(temp.next.next.data.Name);
+                // MessageBox.Show(l1.getcount().ToString());
+                int i = 0;
+                var history = plist.HistName.Split(',');
+                Stack st = new Stack();
+                for (int k = 1; k < history.Length; k++)
                 {
-                    if (pls == temp.data.Name)
-                    {
-                        //  MessageBox.Show(temp.data.Name);
-                        m2[i] = new movieplay(p2);
-                        m2[i].Nametext = temp.data.Name;
-                        m2[i].Icon = temp.data.photoback(temp.data.Imagefile);
-                        m2[i].ID = temp.data.M_id.ToString();
-
-                        
-                        if (flowLayoutPanel1.Controls.Count < 0)
-                        {
-                            flowLayoutPanel1.Controls.Clear();
-                        }
-                        else
-                        {
-                            m2[i].Show();
-                            flowLayoutPanel1.Controls.Add(m2[i]);
-                        }
-                    }
-                    temp = temp.next;
-
-
+                    st.Push(history[k]);
                 }
-                i++;
-            }
+                Node stemp = st.rethead();
+                while (stemp != null)
+                {
+                    temp = l1.gethead();
+                    for (int j = 0; j < l1.getcount(); j++)
+                    {
+                        try
+                        {
+                            if (stemp.data == temp.data.Name)
+                            {
+                                //  MessageBox.Show(temp.data.Name);
+                                m2[i] = new movieplay(m,p2, username);
+                                m2[i].Nametext = temp.data.Name;
+                                m2[i].Icon = temp.data.photoback(temp.data.Imagefile);
+                                m2[i].ID = temp.data.M_id.ToString();
 
+
+                                if (flowLayoutPanel1.Controls.Count < 0)
+                                {
+                                    flowLayoutPanel1.Controls.Clear();
+                                }
+                                else
+                                {
+                                    m2[i].Show();
+                                    flowLayoutPanel1.Controls.Add(m2[i]);
+                                }
+                            }
+                        }
+                        catch (Exception eeeeeeeeeee)
+                        {
+                            MessageBox.Show("Some error");
+                        }
+                        temp = temp.next;
+
+
+                    }
+                    stemp = stemp.next;
+                    i++;
+                }
+            }
+            catch(Exception eeee)
+            {
+
+            }
+           
         }
     }
 }

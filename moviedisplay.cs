@@ -133,11 +133,15 @@ namespace RIOFLIX123
         }
         #endregion
         Panel p2;
-
-        public moviedisplay(Panel p1)
+        string username1;
+        module m2;
+        SingleLinkedList l1;
+        public moviedisplay(module m1,Panel p1,string username)
         {
-            p2 = p1;          
-        
+            m2 = m1;
+            username1 = username;
+            p2 = p1;
+            l1 = m1.returnlist();
             InitializeComponent();
         }
         moviedata obj;
@@ -159,7 +163,7 @@ namespace RIOFLIX123
             {
                 MessageBox.Show("Internet Error");
             }
-
+            populatepanel1();
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -181,7 +185,7 @@ namespace RIOFLIX123
         private void mylistbutton_Click(object sender, EventArgs e)
         {
             playlist pl = new playlist();
-            pl.adddatalist(pl, nametext,"");
+            pl.adddatalist(pl, nametext,username1);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -192,8 +196,8 @@ namespace RIOFLIX123
         private void pictureBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             playlist pl = new playlist();
-            pl.retrivevalues("");
-            pl.adddatahist(pl, nametext,"");
+            pl.retrivevalues(username1);
+            pl.adddatahist(pl, nametext,username1);
             var url = obj.Videofile;
         }
 
@@ -201,5 +205,66 @@ namespace RIOFLIX123
         {
 
         }
+        void populatepanel1()
+        {
+
+            try
+            {
+               
+                var like = m2.getreccomend(nametext);
+                MessageBox.Show("called");
+                movieplay[] ml = new movieplay[like.Count];
+
+
+
+
+                SNode temp;
+                //MessageBox.Show(temp.next.next.data.Name);
+                // MessageBox.Show(l1.getcount().ToString());
+                int i = 0;
+                foreach (var pls in like)
+                {
+                    temp = l1.gethead();
+                    for (int j = 0; j < l1.getcount(); j++)
+                    {
+                        try
+                        {
+                            if (pls == temp.data.Name)
+                            {
+                                //  MessageBox.Show(temp.data.Name);
+                                ml[i] = new movieplay(m2,p2, username1);
+                                ml[i].Nametext = temp.data.Name;
+                                ml[i].Icon = temp.data.photoback(temp.data.Imagefile);
+                                ml[i].ID = temp.data.M_id.ToString();
+
+
+                                if (flowLayoutPanel1.Controls.Count < 0)
+                                {
+                                    flowLayoutPanel1.Controls.Clear();
+                                }
+                                else
+                                {
+                                    ml[i].Show();
+                                    flowLayoutPanel1.Controls.Add(ml[i]);
+                                }
+
+                            }
+                        }
+                        catch (Exception eee)
+                        {
+
+                        }
+                        temp = temp.next;
+                    }
+                    i++;
+                }
+            }
+            catch (Exception eee)
+            {
+
+            }
+
+        }
+
     }
 }

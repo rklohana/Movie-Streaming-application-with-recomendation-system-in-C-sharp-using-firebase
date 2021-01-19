@@ -49,6 +49,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "maylikepanel";
             this.Size = new System.Drawing.Size(580, 544);
+            this.Load += new System.EventHandler(this.maylikepanel_Load);
             this.ResumeLayout(false);
 
         }

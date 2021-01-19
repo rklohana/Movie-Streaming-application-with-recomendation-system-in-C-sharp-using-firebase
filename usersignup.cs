@@ -12,8 +12,10 @@ namespace RIOFLIX123
 {
     public partial class usersignup : UserControl
     { Userdata c2 = new Userdata();
-        public usersignup()
+        loginformUSER lf1;
+        public usersignup(loginformUSER lf)
         {
+            lf1 = lf;
             InitializeComponent();
         }
 
@@ -28,7 +30,9 @@ namespace RIOFLIX123
                     c2.add_data(nametext.Text, mobiletext.Text, addresstext.Text, emailtext.Text, passtext.Text,photo);
                     c2.adddata(c2);
                     //   MessageBox.Show("Account  created");
-
+                    
+                    lf1.Show();
+                    this.Hide();
 
 
                    // this.Hide();

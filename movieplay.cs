@@ -60,8 +60,12 @@ namespace RIOFLIX123
 
         #endregion
         Panel p2;
-        public movieplay(Panel p1)
+        string username;
+        module ml;
+        public movieplay(module m1,Panel p1,string n)
         {
+            ml = m1;
+            username = n;
             p2 = p1;
             InitializeComponent();
         }
@@ -89,7 +93,7 @@ namespace RIOFLIX123
         private async void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             
-           moviedisplay m2 = new moviedisplay(p2);
+           moviedisplay m2 = new moviedisplay(ml,p2,username);
             try
             {
                 FirebaseResponse r = await client.GetAsync("Movie DATA/" + id);

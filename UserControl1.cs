@@ -25,6 +25,7 @@ namespace RIOFLIX123
             BasePath = "https://rioflix-default-rtdb.firebaseio.com/"
         };
         Panel p2;
+        module ml;
         public UserControl1()
         {
             p2 = new Panel();
@@ -74,7 +75,7 @@ namespace RIOFLIX123
                 for(int i=0;i<l1.getcount();i++)
             {
               //  MessageBox.Show(temp.data.Name);
-                m2[i] = new movieplay(p2);
+                m2[i] = new movieplay(ml,p2,"");
                     m2[i].Nametext = temp.data.Name;
                     m2[i].Icon = temp.data.photoback(temp.data.Imagefile);
                     m2[i].ID = temp.data.M_id.ToString();

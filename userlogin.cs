@@ -17,46 +17,69 @@ namespace RIOFLIX123
     {
         
         IFirebaseClient client;
-        public userlogin()
-        {   
+        loginformUSER lf1;
+        public userlogin(loginformUSER lf)
+        {
+            lf1 = lf;
             InitializeComponent();
         }
        public Userdata ud;
         public Admin ad;
       public  playlist pl;
+        module m1 = new module();
         private async void signin_Click(object sender, EventArgs e)
         {
-            if (bunifuDropdown1.selectedIndex == 1)
-            {   
-                FirebaseResponse r = await client.GetAsync("Userdata DATA/" + mobiletext.Text);
-                 ud = r.ResultAs<Userdata>();
-                if (ud.Password == passwordtext.Text)
+            if (bunifuDropdown1.selectedValue == "USER")
+            {
+                try
                 {
+                    FirebaseResponse r = await client.GetAsync("Userdata DATA/" + mobiletext.Text);
+                    ud = r.ResultAs<Userdata>();
+                    if (ud.Password == passwordtext.Text)
+                    {
 
-                    FirebaseResponse r1 = await client.GetAsync("Playlist/" + ud.Name);
-                     pl = r1.ResultAs<playlist>();
-                    retrievedata();
-                    listcheck lc = new listcheck(l1,pl,ad,ud);
+                        FirebaseResponse r1 = await client.GetAsync("Playlist/" + ud.Name);
+                        pl = r1.ResultAs<playlist>();
+                        retrievedata();
+                        listcheck lc = new listcheck(l1, pl, ud, m1);
+                        lc.Show();
+                        this.Hide();
+
+                    }
+                    else
+                    {
+                        invalidlabel.Show();
+                    }
                 }
-                else
+                catch(Exception eeee)
                 {
-                    invalidlabel.Show();
+                    MessageBox.Show("Error");
                 }
             }
-            else if (bunifuDropdown1.selectedIndex == 2)
+            else if (bunifuDropdown1.selectedValue == "ADMIN")
             {
-                FirebaseResponse r = await client.GetAsync("Admin DATA/" + mobiletext.Text);
-               ad = r.ResultAs<Admin>();
-                if (ad.Password == passwordtext.Text)
-                
+                try
                 {
-                    FirebaseResponse r1 = await client.GetAsync("Playlist/" + ad.Name);
-                   pl = r1.ResultAs<playlist>();
-                    retrievedata();
+                    FirebaseResponse r = await client.GetAsync("Admin DATA/" + mobiletext.Text);
+                    ad = r.ResultAs<Admin>();
+                    if (ad.Password == passwordtext.Text)
+
+                    {
+                        FirebaseResponse r1 = await client.GetAsync("Playlist/" + ad.Name);
+                        pl = r1.ResultAs<playlist>();
+                        retrievedata();
+                        adminside lc = new adminside(l1, pl, ad, m1);
+                        lc.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        invalidlabel.Show();
+                    }
                 }
-                else
+                catch(Exception eee)
                 {
-                    invalidlabel.Show();
+                    MessageBox.Show("error");
                 }
             }
             else
@@ -66,9 +89,9 @@ namespace RIOFLIX123
             }
         }
         counter1 c1;
-      public  SingleLinkedList l1= new SingleLinkedList();
+      public  SingleLinkedList l1;
         public async void retrievedata()
-        {
+        {/*
             FirebaseResponse response = await client.GetAsync("Counter DATA/");
             c1 = response.ResultAs<counter1>();
             MessageBox.Show(c1.Mov_id.ToString());
@@ -81,13 +104,15 @@ namespace RIOFLIX123
                 //  MessageBox.Show(m1.Name+" "+i.ToString() );
                 l1.InsertLast(m1);
 
-            }
+            }*/
+            l1 = m1.returnlist();
+            
         }
         private void bunifuCustomLabel1_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            signupform f = new signupform(lf1);
             f.Show();
-            this.Hide();
+            lf1.Hide();
         }
         Userdata c2 = new Userdata();
         private void userlogin_Load(object sender, EventArgs e)
@@ -106,12 +131,17 @@ namespace RIOFLIX123
         {
             if (bunifuDropdown1.selectedIndex == 1)
             {
-                mobiletext.Text = "Name: ";
+                label2.Text = "Name: ";
             }
             else
             {
-                mobiletext.Text = "Phone: ";
+                label2.Text = "Phone: ";
             }
+        }
+
+        private void mobiletext_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -82,6 +82,7 @@ namespace RIOFLIX123
             this.mobiletext.Size = new System.Drawing.Size(292, 39);
             this.mobiletext.TabIndex = 2;
             this.mobiletext.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.mobiletext.OnValueChanged += new System.EventHandler(this.mobiletext_OnValueChanged);
             // 
             // label3
             // 
@@ -146,7 +147,7 @@ namespace RIOFLIX123
             this.bunifuCustomLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(236, 291);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(161, 291);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(138, 15);
             this.bunifuCustomLabel1.TabIndex = 6;
@@ -161,10 +162,10 @@ namespace RIOFLIX123
             this.bunifuDropdown1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuDropdown1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuDropdown1.Items = new string[] {
-        "ADMIN",
-        "USER"};
+        "USER",
+        "ADMIN"};
             this.bunifuDropdown1.Location = new System.Drawing.Point(236, 70);
-            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuDropdown1.Name = "bunifuDropdown1";
             this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
@@ -180,9 +181,9 @@ namespace RIOFLIX123
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(236, 38);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 18);
+            this.label4.Size = new System.Drawing.Size(60, 18);
             this.label4.TabIndex = 8;
-            this.label4.Text = "*Please Senpai :(";
+            this.label4.Text = "*Select";
             // 
             // invalidlabel
             // 

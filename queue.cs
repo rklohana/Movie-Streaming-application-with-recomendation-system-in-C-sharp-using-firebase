@@ -46,7 +46,10 @@ namespace RIOFLIX123
                 }
                 Console.WriteLine("{0} inserted into Queue", item);
             }
-
+        public QNode rethead()
+        {
+            return front;
+        }
             internal void Dequeue()
             {
                 // If queue is empty, return NULL.  

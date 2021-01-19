@@ -762,8 +762,8 @@ namespace RIOFLIX123
             }
             //   MessageBox.Show("Loading");
             gettingdata();
-            removestop();
-            similarity();
+           
+            
         }
         public void removestop()
         {
@@ -786,6 +786,7 @@ namespace RIOFLIX123
                     merge[i] = director[i] + " " + cast[i] + " " + genre[i] + " " + keyword[i];
                 }
             }
+            similarity();
         }
         public SingleLinkedList returnlist()
         {
@@ -810,7 +811,7 @@ namespace RIOFLIX123
 
                 FirebaseResponse response1 = await client.GetAsync("Movie DATA/" + i.ToString());
                 moviedata m1 = response1.ResultAs<moviedata>();
-                //  MessageBox.Show(m1.Name+" "+i.ToString() );
+                 // MessageBox.Show(m1.Name+" "+i.ToString() );
                 l1.InsertLast(m1);
                 movies[i] = m1.Name;
                 overview[i] = m1.Description;
@@ -819,6 +820,8 @@ namespace RIOFLIX123
                 cast[i] = m1.Actor;
                 genre[i] = m1.Genre;
             }
+            MessageBox.Show(movies[movies.Length - 1]);
+            removestop();
         }
         
         public double[][] simat,simat2;
