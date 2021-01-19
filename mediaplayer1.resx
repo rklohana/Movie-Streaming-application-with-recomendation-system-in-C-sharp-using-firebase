@@ -117,21 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pausebutton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="vlcControl1.VlcLibDirectory" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAgBJREFUeF7t
-        ncFpA1EUA7eUlOASUlo6Mu7AnTkWrC6Dr0aHnYG5fXhIKuAfIiIiIiIiIiIiIiIiIiIb7vf77e3vB3/O
-        J18jN3Cz3s4n1+PxeDzfvj74dz75GrmBm/V5PrkeCY8yqoMsSHiUUR1kQcKjjOogCxIeZVQHWZDwKKM6
-        yIKERxnVQRYkPMqoDrIg4VFGdZAFCY8yqoMsSHiUUR1kQcKjjOogCxIeZVQHWZDwKKM6yIKERxnVQRYk
-        PMqoDrIg4VFGdZAFCY8yqoMsSHiUUR1kQcKjjOogCxIeZVQHWZDwKKM6yIKERxnVQRYkPMqoDrIg4VFG
-        dZAFCY8yqoMsSHiUUR1kQcKjjOogCxIeZVQHWZDwKKM6yIKERxnVQRYkPMqoDrIg4VFGdZAFCY8yqoMs
-        SHiUUR1kQcKjjOogCxIeZVQHWZDwKKM6yIKERxnVQRYkPMqoDrIg4VFGdZAFCY8yqoMsSHiUUR1kQcKj
-        jOogCxIeZVQHWZDwKKM6yIKERxnVQRYkPMqoDrIg4VFGdZAFCY8yqoMsSHiUUR1kQcKjjOogCxIeZVQH
-        WZDwKKM6yIKERxnVQRYkPMqoDrIg4VFGdZAFCY8yqoMsSHiUUR1kQcKjjOogCxIeZVQHWZDwKKM6yIJ8
-        DYGvIqrfVYiIiIiIiIiIiIiIiIjI5TiOf+sDTUMbIROsAAAAAElFTkSuQmCC
+        AAEAAAD/////AQAAAAAAAAAEAQAAABdTeXN0ZW0uSU8uRGlyZWN0b3J5SW5mbwIAAAAMT3JpZ2luYWxQ
+        YXRoCEZ1bGxQYXRoAQEGAgAAACNDOlxQcm9ncmFtIEZpbGVzICh4ODYpXFZpZGVvTEFOXFZMQwkCAAAA
+        Cw==
 </value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="playbutton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAABXpJREFUeF7t
@@ -159,6 +152,20 @@
         4ItgMgSizjjteV00TvW0bAFbAlMMmSpczt7o9/vXcHVCUQoY0r65ijrIaYhstF8VjoZ8jbPiYQ4VqsDS
         kPg3DvMFC0M+QZk7uLhQNQZD/oLwA13+4VetZBjSnrQb39AMod3ZZK6iSRKGyL9V9QEYsgXayg8FQRAE
         QRAEQRAEQRAEoVxmZv4HT3fUvCLcSc8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pausebutton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAgBJREFUeF7t
+        ncFpA1EUA7eUlOASUlo6Mu7AnTkWrC6Dr0aHnYG5fXhIKuAfIiIiIiIiIiIiIiIiIiIb7vf77e3vB3/O
+        J18jN3Cz3s4n1+PxeDzfvj74dz75GrmBm/V5PrkeCY8yqoMsSHiUUR1kQcKjjOogCxIeZVQHWZDwKKM6
+        yIKERxnVQRYkPMqoDrIg4VFGdZAFCY8yqoMsSHiUUR1kQcKjjOogCxIeZVQHWZDwKKM6yIKERxnVQRYk
+        PMqoDrIg4VFGdZAFCY8yqoMsSHiUUR1kQcKjjOogCxIeZVQHWZDwKKM6yIKERxnVQRYkPMqoDrIg4VFG
+        dZAFCY8yqoMsSHiUUR1kQcKjjOogCxIeZVQHWZDwKKM6yIKERxnVQRYkPMqoDrIg4VFGdZAFCY8yqoMs
+        SHiUUR1kQcKjjOogCxIeZVQHWZDwKKM6yIKERxnVQRYkPMqoDrIg4VFGdZAFCY8yqoMsSHiUUR1kQcKj
+        jOogCxIeZVQHWZDwKKM6yIKERxnVQRYkPMqoDrIg4VFGdZAFCY8yqoMsSHiUUR1kQcKjjOogCxIeZVQH
+        WZDwKKM6yIKERxnVQRYkPMqoDrIg4VFGdZAFCY8yqoMsSHiUUR1kQcKjjOogCxIeZVQHWZDwKKM6yIJ8
+        DYGvIqrfVYiIiIiIiIiIiIiIiIjI5TiOf+sDTUMbIROsAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

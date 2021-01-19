@@ -16,7 +16,7 @@ using System.Drawing.Imaging;
 
 namespace RIOFLIX123
 {
-    class moviedata
+   public class moviedata
     {
         protected int m_id;
         public int M_id

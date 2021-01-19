@@ -34,10 +34,13 @@
             this.playbutton = new Bunifu.Framework.UI.BunifuImageButton();
             this.pausebutton = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuSlider1 = new Bunifu.Framework.UI.BunifuSlider();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playbutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pausebutton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // vlcControl1
@@ -50,13 +53,15 @@
             this.vlcControl1.Spu = -1;
             this.vlcControl1.TabIndex = 0;
             this.vlcControl1.Text = "vlcControl1";
-            this.vlcControl1.VlcLibDirectory = null;
+            this.vlcControl1.VlcLibDirectory = ((System.IO.DirectoryInfo)(resources.GetObject("vlcControl1.VlcLibDirectory")));
             this.vlcControl1.VlcMediaplayerOptions = null;
             this.vlcControl1.Click += new System.EventHandler(this.vlcControl1_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.bunifuSlider1);
             this.panel4.Controls.Add(this.pausebutton);
             this.panel4.Controls.Add(this.playbutton);
@@ -71,7 +76,7 @@
             this.playbutton.BackColor = System.Drawing.Color.Transparent;
             this.playbutton.Image = ((System.Drawing.Image)(resources.GetObject("playbutton.Image")));
             this.playbutton.ImageActive = null;
-            this.playbutton.Location = new System.Drawing.Point(3, 5);
+            this.playbutton.Location = new System.Drawing.Point(369, 3);
             this.playbutton.Name = "playbutton";
             this.playbutton.Size = new System.Drawing.Size(25, 24);
             this.playbutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -85,7 +90,7 @@
             this.pausebutton.BackColor = System.Drawing.Color.Transparent;
             this.pausebutton.Image = ((System.Drawing.Image)(resources.GetObject("pausebutton.Image")));
             this.pausebutton.ImageActive = null;
-            this.pausebutton.Location = new System.Drawing.Point(34, 3);
+            this.pausebutton.Location = new System.Drawing.Point(369, 5);
             this.pausebutton.Name = "pausebutton";
             this.pausebutton.Size = new System.Drawing.Size(25, 24);
             this.pausebutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -108,6 +113,26 @@
             this.bunifuSlider1.Value = 100;
             this.bunifuSlider1.ValueChanged += new System.EventHandler(this.bunifuSlider1_ValueChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(44, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "label1";
+            // 
             // mediaplayer1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,8 +145,10 @@
             this.Load += new System.EventHandler(this.mediaplayer1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playbutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pausebutton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -133,5 +160,7 @@
         private Bunifu.Framework.UI.BunifuImageButton pausebutton;
         private Bunifu.Framework.UI.BunifuImageButton playbutton;
         private Bunifu.Framework.UI.BunifuSlider bunifuSlider1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

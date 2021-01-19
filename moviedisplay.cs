@@ -98,7 +98,7 @@ namespace RIOFLIX123
             set
             {
                 icon = value;
-                pictureBox1.Image = value;
+                bunifuImageButton2.Image = value;
             }
         }
 
@@ -131,6 +131,20 @@ namespace RIOFLIX123
 
             }
         }
+
+
+        private string videofile;
+        [Category("Customs props")]
+        public string Videofile
+        {
+            get { return videofile; }
+            set
+            {
+                videofile = value;
+
+            }
+        }
+        
         #endregion
         Panel p2;
         string username1;
@@ -147,6 +161,7 @@ namespace RIOFLIX123
         moviedata obj;
         private async void moviedisplay_Load(object sender, EventArgs e)
         {
+            donepic.Hide();
             client = new FireSharp.FirebaseClient(c2.getConfig());
             if (client == null)
             {
@@ -168,7 +183,7 @@ namespace RIOFLIX123
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            p2.Hide();
+            this.Hide();
         }
 
         private void bunifuSlider1_ValueChanged(object sender, EventArgs e)
@@ -186,6 +201,8 @@ namespace RIOFLIX123
         {
             playlist pl = new playlist();
             pl.adddatalist(pl, nametext,username1);
+            mylistbutton.Hide();
+            donepic.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -195,10 +212,7 @@ namespace RIOFLIX123
 
         private void pictureBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            playlist pl = new playlist();
-            pl.retrivevalues(username1);
-            pl.adddatahist(pl, nametext,username1);
-            var url = obj.Videofile;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -266,5 +280,27 @@ namespace RIOFLIX123
 
         }
 
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton2_DoubleClick(object sender, EventArgs e)
+        {
+            playlist pl = new playlist();
+            pl.retrivevalues(username1);
+            pl.adddatahist(pl, nametext, username1);
+            var url = obj.Videofile;
+            mediaplayer1 mp = new mediaplayer1(obj, p2);
+            p2.Controls.Clear();
+            p2.Controls.Add(mp);
+            p2.Show();
+            p2.BringToFront();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
