@@ -74,7 +74,7 @@ namespace RIOFLIX123
             this.mobiletext.HintForeColor = System.Drawing.Color.Empty;
             this.mobiletext.HintText = "";
             this.mobiletext.isPassword = false;
-            this.mobiletext.LineFocusedColor = System.Drawing.Color.Lavender;
+            this.mobiletext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.mobiletext.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.mobiletext.LineMouseHoverColor = System.Drawing.Color.Transparent;
             this.mobiletext.LineThickness = 4;
@@ -106,7 +106,7 @@ namespace RIOFLIX123
             this.passwordtext.HintForeColor = System.Drawing.Color.Empty;
             this.passwordtext.HintText = "";
             this.passwordtext.isPassword = false;
-            this.passwordtext.LineFocusedColor = System.Drawing.Color.Lavender;
+            this.passwordtext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.passwordtext.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.passwordtext.LineMouseHoverColor = System.Drawing.Color.Transparent;
             this.passwordtext.LineThickness = 4;

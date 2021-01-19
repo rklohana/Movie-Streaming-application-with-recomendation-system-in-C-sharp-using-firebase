@@ -78,13 +78,13 @@
             // 
             this.addresstext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.addresstext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.addresstext.ForeColor = System.Drawing.Color.Maroon;
+            this.addresstext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.addresstext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.addresstext.HintText = "";
             this.addresstext.isPassword = false;
-            this.addresstext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.addresstext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.addresstext.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
-            this.addresstext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.addresstext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.addresstext.LineThickness = 3;
             this.addresstext.Location = new System.Drawing.Point(184, 129);
             this.addresstext.Margin = new System.Windows.Forms.Padding(4);
@@ -121,7 +121,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(454, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(452, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(123, 129);
             this.pictureBox1.TabIndex = 30;
@@ -204,13 +204,13 @@
             this.conpasstext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.conpasstext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.conpasstext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.conpasstext.ForeColor = System.Drawing.Color.Maroon;
+            this.conpasstext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.conpasstext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.conpasstext.HintText = "";
             this.conpasstext.isPassword = true;
-            this.conpasstext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.conpasstext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.conpasstext.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
-            this.conpasstext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.conpasstext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.conpasstext.LineThickness = 3;
             this.conpasstext.Location = new System.Drawing.Point(184, 277);
             this.conpasstext.Margin = new System.Windows.Forms.Padding(4);
@@ -223,13 +223,13 @@
             // 
             this.passtext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.passtext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.passtext.ForeColor = System.Drawing.Color.Maroon;
+            this.passtext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.passtext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.passtext.HintText = "";
             this.passtext.isPassword = true;
-            this.passtext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.passtext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.passtext.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
-            this.passtext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.passtext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.passtext.LineThickness = 3;
             this.passtext.Location = new System.Drawing.Point(184, 229);
             this.passtext.Margin = new System.Windows.Forms.Padding(4);
@@ -268,13 +268,13 @@
             // 
             this.emailtext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.emailtext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.emailtext.ForeColor = System.Drawing.Color.Maroon;
+            this.emailtext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.emailtext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.emailtext.HintText = "";
             this.emailtext.isPassword = false;
-            this.emailtext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.emailtext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.emailtext.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
-            this.emailtext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.emailtext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.emailtext.LineThickness = 3;
             this.emailtext.Location = new System.Drawing.Point(184, 179);
             this.emailtext.Margin = new System.Windows.Forms.Padding(4);
@@ -287,13 +287,13 @@
             // 
             this.mobiletext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.mobiletext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.mobiletext.ForeColor = System.Drawing.Color.Maroon;
+            this.mobiletext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mobiletext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.mobiletext.HintText = "";
             this.mobiletext.isPassword = false;
-            this.mobiletext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.mobiletext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.mobiletext.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
-            this.mobiletext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.mobiletext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.mobiletext.LineThickness = 3;
             this.mobiletext.Location = new System.Drawing.Point(184, 79);
             this.mobiletext.Margin = new System.Windows.Forms.Padding(4);
@@ -306,13 +306,13 @@
             // 
             this.nametext.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nametext.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.nametext.ForeColor = System.Drawing.Color.Maroon;
+            this.nametext.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.nametext.HintForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.nametext.HintText = "";
             this.nametext.isPassword = false;
-            this.nametext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.nametext.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.nametext.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
-            this.nametext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.nametext.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(0)))));
             this.nametext.LineThickness = 3;
             this.nametext.Location = new System.Drawing.Point(184, 29);
             this.nametext.Margin = new System.Windows.Forms.Padding(4);
