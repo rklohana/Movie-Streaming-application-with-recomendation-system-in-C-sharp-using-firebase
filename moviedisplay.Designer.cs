@@ -180,9 +180,9 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 371);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 295);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(577, 170);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(577, 210);
             this.flowLayoutPanel1.TabIndex = 12;
             // 
             // label1
@@ -255,7 +255,7 @@
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.moviename);
             this.Name = "moviedisplay";
-            this.Size = new System.Drawing.Size(580, 544);
+            this.Size = new System.Drawing.Size(580, 508);
             this.Load += new System.EventHandler(this.moviedisplay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mylistbutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();

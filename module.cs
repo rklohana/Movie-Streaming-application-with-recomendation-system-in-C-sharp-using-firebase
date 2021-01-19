@@ -751,6 +751,7 @@ namespace RIOFLIX123
         };
         counter1 c1 = new counter1();
         SingleLinkedList l1 = new SingleLinkedList();
+        AVL btree = new AVL();
         public  module()
         {
             client = new FireSharp.FirebaseClient(config);
@@ -792,6 +793,10 @@ namespace RIOFLIX123
         {
             return l1;
         }
+        public AVL returnbtree()
+        {
+            return btree;
+        }
         string[] merge;
         public async void gettingdata()
         {
@@ -813,6 +818,7 @@ namespace RIOFLIX123
                 moviedata m1 = response1.ResultAs<moviedata>();
                  // MessageBox.Show(m1.Name+" "+i.ToString() );
                 l1.InsertLast(m1);
+                btree.Add(m1);
                 movies[i] = m1.Name;
                 overview[i] = m1.Description;
                 director[i] = m1.Director;

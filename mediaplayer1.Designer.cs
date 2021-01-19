@@ -31,16 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mediaplayer1));
             this.vlcControl1 = new Vlc.DotNet.Forms.VlcControl();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.playbutton = new Bunifu.Framework.UI.BunifuImageButton();
-            this.pausebutton = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuSlider1 = new Bunifu.Framework.UI.BunifuSlider();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuSlider1 = new Bunifu.Framework.UI.BunifuSlider();
+            this.pausebutton = new Bunifu.Framework.UI.BunifuImageButton();
+            this.playbutton = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playbutton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pausebutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pausebutton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playbutton)).BeginInit();
             this.SuspendLayout();
             // 
             // vlcControl1
@@ -56,10 +57,13 @@
             this.vlcControl1.VlcLibDirectory = ((System.IO.DirectoryInfo)(resources.GetObject("vlcControl1.VlcLibDirectory")));
             this.vlcControl1.VlcMediaplayerOptions = null;
             this.vlcControl1.Click += new System.EventHandler(this.vlcControl1_Click);
+            this.vlcControl1.MouseEnter += new System.EventHandler(this.vlcControl1_MouseEnter);
+            this.vlcControl1.MouseLeave += new System.EventHandler(this.vlcControl1_MouseLeave);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel4.Controls.Add(this.bunifuProgressBar1);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.bunifuSlider1);
@@ -71,33 +75,25 @@
             this.panel4.Size = new System.Drawing.Size(580, 41);
             this.panel4.TabIndex = 2;
             // 
-            // playbutton
+            // label1
             // 
-            this.playbutton.BackColor = System.Drawing.Color.Transparent;
-            this.playbutton.Image = ((System.Drawing.Image)(resources.GetObject("playbutton.Image")));
-            this.playbutton.ImageActive = null;
-            this.playbutton.Location = new System.Drawing.Point(369, 3);
-            this.playbutton.Name = "playbutton";
-            this.playbutton.Size = new System.Drawing.Size(25, 24);
-            this.playbutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.playbutton.TabIndex = 0;
-            this.playbutton.TabStop = false;
-            this.playbutton.Zoom = 5;
-            this.playbutton.Click += new System.EventHandler(this.playbutton_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(44, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "label1";
             // 
-            // pausebutton
+            // pictureBox1
             // 
-            this.pausebutton.BackColor = System.Drawing.Color.Transparent;
-            this.pausebutton.Image = ((System.Drawing.Image)(resources.GetObject("pausebutton.Image")));
-            this.pausebutton.ImageActive = null;
-            this.pausebutton.Location = new System.Drawing.Point(369, 5);
-            this.pausebutton.Name = "pausebutton";
-            this.pausebutton.Size = new System.Drawing.Size(25, 24);
-            this.pausebutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pausebutton.TabIndex = 1;
-            this.pausebutton.TabStop = false;
-            this.pausebutton.Zoom = 10;
-            this.pausebutton.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // bunifuSlider1
             // 
@@ -113,25 +109,45 @@
             this.bunifuSlider1.Value = 100;
             this.bunifuSlider1.ValueChanged += new System.EventHandler(this.bunifuSlider1_ValueChanged);
             // 
-            // pictureBox1
+            // pausebutton
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pausebutton.BackColor = System.Drawing.Color.Transparent;
+            this.pausebutton.Image = ((System.Drawing.Image)(resources.GetObject("pausebutton.Image")));
+            this.pausebutton.ImageActive = null;
+            this.pausebutton.Location = new System.Drawing.Point(369, 5);
+            this.pausebutton.Name = "pausebutton";
+            this.pausebutton.Size = new System.Drawing.Size(25, 24);
+            this.pausebutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pausebutton.TabIndex = 1;
+            this.pausebutton.TabStop = false;
+            this.pausebutton.Zoom = 10;
+            this.pausebutton.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
-            // label1
+            // playbutton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(44, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.playbutton.BackColor = System.Drawing.Color.Transparent;
+            this.playbutton.Image = ((System.Drawing.Image)(resources.GetObject("playbutton.Image")));
+            this.playbutton.ImageActive = null;
+            this.playbutton.Location = new System.Drawing.Point(369, 3);
+            this.playbutton.Name = "playbutton";
+            this.playbutton.Size = new System.Drawing.Size(25, 24);
+            this.playbutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playbutton.TabIndex = 0;
+            this.playbutton.TabStop = false;
+            this.playbutton.Zoom = 5;
+            this.playbutton.Click += new System.EventHandler(this.playbutton_Click);
+            // 
+            // bunifuProgressBar1
+            // 
+            this.bunifuProgressBar1.BackColor = System.Drawing.Color.Silver;
+            this.bunifuProgressBar1.BorderRadius = 5;
+            this.bunifuProgressBar1.Location = new System.Drawing.Point(170, 10);
+            this.bunifuProgressBar1.MaximumValue = 100;
+            this.bunifuProgressBar1.Name = "bunifuProgressBar1";
+            this.bunifuProgressBar1.ProgressColor = System.Drawing.Color.Teal;
+            this.bunifuProgressBar1.Size = new System.Drawing.Size(152, 10);
+            this.bunifuProgressBar1.TabIndex = 5;
+            this.bunifuProgressBar1.Value = 0;
             // 
             // mediaplayer1
             // 
@@ -146,9 +162,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playbutton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pausebutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pausebutton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playbutton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -162,5 +178,6 @@
         private Bunifu.Framework.UI.BunifuSlider bunifuSlider1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuProgressBar bunifuProgressBar1;
     }
 }

@@ -87,13 +87,15 @@ namespace RIOFLIX123
            
             mp = new maylikepanel(m2, recentpanel, l1, p2,un.Name);
             al = new ALLmovies(m2,l1, recentpanel,un.Name);
-           
-            
-        }
+            sp = new searchpanel(m2, recentpanel, un.Name);
 
+        }
+        searchpanel sp;
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             
+            recentpanel.Controls.Clear();
+            recentpanel.Controls.Add(sp);
         }
 
         private void moviedisppanel_Paint(object sender, PaintEventArgs e)

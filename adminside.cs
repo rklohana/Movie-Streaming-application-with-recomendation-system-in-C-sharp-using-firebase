@@ -82,7 +82,7 @@ namespace RIOFLIX123
         {
 
         }
-
+        searchpanel sp;
         private void adminside_Load(object sender, EventArgs e)
         {
             client = new FireSharp.FirebaseClient(config);
@@ -97,6 +97,7 @@ namespace RIOFLIX123
 
             mp = new maylikepanel(m2, recentpanel, l1, p2, un.Name);
             al = new ALLmovies(m2,l1, recentpanel, un.Name);
+            sp = new searchpanel(m2, recentpanel, un.Name);
         }
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
@@ -104,6 +105,13 @@ namespace RIOFLIX123
             movietemplate mt = new movietemplate();
             recentpanel.Controls.Clear();
             recentpanel.Controls.Add(mt);
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+
+            recentpanel.Controls.Clear();
+            recentpanel.Controls.Add(sp);
         }
     }
 }

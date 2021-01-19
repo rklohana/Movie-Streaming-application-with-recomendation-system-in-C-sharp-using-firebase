@@ -98,7 +98,7 @@ namespace RIOFLIX123
             {
                 FirebaseResponse r = await client.GetAsync("Movie DATA/" + id);
                 moviedata obj = r.ResultAs<moviedata>();
-                
+                m2.Videofile = obj.Videofile;
                 m2.Nametext = obj.Name;
                 m2.Directortext = obj.Director;
                 m2.Genretext = obj.Genre;

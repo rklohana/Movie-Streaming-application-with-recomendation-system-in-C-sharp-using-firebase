@@ -309,6 +309,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="hashtable.cs" />
     <Compile Include="linkedlist.cs" />
     <Compile Include="listcheck.cs">
       <SubType>Form</SubType>
@@ -369,6 +370,12 @@
     </Compile>
     <Compile Include="recent.Designer.cs">
       <DependentUpon>recent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchpanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="searchpanel.Designer.cs">
+      <DependentUpon>searchpanel.cs</DependentUpon>
     </Compile>
     <Compile Include="signupform.cs">
       <SubType>Form</SubType>
@@ -442,6 +449,9 @@
     </Compile>
     <EmbeddedResource Include="recent.resx">
       <DependentUpon>recent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchpanel.resx">
+      <DependentUpon>searchpanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="signupform.resx">
       <DependentUpon>signupform.cs</DependentUpon>

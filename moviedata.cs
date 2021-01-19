@@ -30,7 +30,10 @@ namespace RIOFLIX123
                 m_id = value;
             }
         }
-
+        public    string getname()
+        {
+            return name;
+        }
 
         private string name;
         public string Name { get

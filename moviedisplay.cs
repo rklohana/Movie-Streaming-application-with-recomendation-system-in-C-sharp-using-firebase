@@ -290,8 +290,8 @@ namespace RIOFLIX123
             playlist pl = new playlist();
             pl.retrivevalues(username1);
             pl.adddatahist(pl, nametext, username1);
-            var url = obj.Videofile;
-            mediaplayer1 mp = new mediaplayer1(obj, p2);
+            var url = videofile;
+            mediaplayer1 mp = new mediaplayer1(nametext, p2,url,icon);
             p2.Controls.Clear();
             p2.Controls.Add(mp);
             p2.Show();

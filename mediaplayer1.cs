@@ -14,18 +14,25 @@ namespace RIOFLIX123
     {
         moviedata m2;
         Panel p2;
-        public mediaplayer1(moviedata m1,Panel p1)
+        string name;
+        string url;
+        Image im;
+        public mediaplayer1(string n,Panel p1,string u,Image ic)
         {
+            im = ic;
+            url = u;
+            name = n;
             p2 = p1;
-            m2 = m1;
+            
             InitializeComponent();
         }
 
         private void mediaplayer1_Load(object sender, EventArgs e)
         {
-            pictureBox1.Image = m2.photoback(m2.Imagefile);
-            label1.Text = m2.Name;
-            vlcControl1.Play(new Uri(m2.Videofile));
+            bunifuProgressBar1.Hide();
+            pictureBox1.Image = im;
+            label1.Text = name;
+            vlcControl1.Play(new Uri(url));
             vlcControl1.Audio.Volume = bunifuSlider1.Value;
             vlcControl1.Time = 0;
             vlcControl1.Update();
@@ -48,7 +55,7 @@ namespace RIOFLIX123
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            pausebutton.Hide();
             vlcControl1.Pause();
             playbutton.Show();
         }
@@ -56,9 +63,20 @@ namespace RIOFLIX123
         private void playbutton_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
+            playbutton.Hide();
             vlcControl1.Pause();
             pausebutton.Show();
+        }
+
+        private void vlcControl1_MouseEnter(object sender, EventArgs e)
+        {
+            bunifuProgressBar1.Show();
+            bunifuProgressBar1.Value = Convert.ToInt32(vlcControl1.Time);
+        }
+
+        private void vlcControl1_MouseLeave(object sender, EventArgs e)
+        {
+            bunifuProgressBar1.Hide();
         }
     }
 }
